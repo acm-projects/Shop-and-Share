@@ -7,29 +7,24 @@
  */
 
  import React from 'react';
- import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
-   StyleSheet,
-   Text,
-   useColorScheme,
-   View,
- } from 'react-native';
+
+ //import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+ import { NavigationContainer } from '@react-navigation/native';
+ //import { createStackNavigator } from '@react-navigation/stack';
  
- 
+ import MenuBar from './src/components/MenuBar.js';
+ //import NewListScreen from './src/screens/NewList';
+
+ //const Tab = createBottomTabNavigator();
+ //const Stack = createStackNavigator();
  
  const App = () => {
    return (
-     <SafeAreaView>
-       <Text>Hello World</Text>
-     </SafeAreaView>
+     <NavigationContainer>
+      <MenuBar />
+     </NavigationContainer>
    );
- };
- 
- const styles = StyleSheet.create({
-   
- });
- 
+ }
+
  export default App;
  
