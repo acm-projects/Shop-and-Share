@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "242417319852",
+    "project_id": "shop-and-share-7c08e",
+    "storage_bucket": "shop-and-share-7c08e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242417319852:android:227cb5e75563b31dd6c409",
+        "android_client_info": {
+          "package_name": "com.shop_and_share"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242417319852-ucmq4avro0bv7qc89keo6pesclvo2t4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOkv1gv5ythsiy1p1CpesjvNxFZU3HCIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242417319852-ucmq4avro0bv7qc89keo6pesclvo2t4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
