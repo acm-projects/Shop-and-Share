@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import NewListScreen from '../NewList';
-
+import { useNavigation } from '@react-navigation/native';
 
 import { 
   StyleSheet, 
@@ -16,6 +15,7 @@ import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
 
 const HomeNoListScreen = () => {
+    const navigation = useNavigation();
     return (
       <>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
@@ -29,7 +29,7 @@ const HomeNoListScreen = () => {
   
           <View style={styles.buttonContainer}>
             <TouchableOpacity
-                onPress={() => navigation.navigate('NewListScreen')}
+                onPress={() => navigation.navigate('Home New List')}
                 >
                 <Text style={styles.buttonText}>
                     Add a List

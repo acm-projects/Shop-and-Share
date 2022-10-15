@@ -1,14 +1,33 @@
 import * as React from 'react';
-import { View, Text } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+
+
+import { 
+  StyleSheet, 
+  Text, 
+  View, 
+  SafeAreaView, 
+  TouchableOpacity, 
+  ImageBackground,
+}  from "react-native";
+
+import styles from './styles.js';
 
 const MyFriendsScreen = () => {
     return (
+      <>
+      <ImageBackground source={require('../../../assets/images/Background.jpg')}
+        style={styles.ImageBackground}>
         <View>
-            <Text>
-                MyFriends screen here
-            </Text>
+          <SafeAreaView>
+                <Text>
+                    my friends screen here
+                </Text>
+          </SafeAreaView>
         </View>
+        </ImageBackground>
+      </>
     )
-}
+  }
 
-export default MyFriendsScreen;
+  export default MyFriendsScreen;

@@ -1,14 +1,33 @@
 import * as React from 'react';
-import { View, Text } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+
+
+import { 
+  StyleSheet, 
+  Text, 
+  View, 
+  SafeAreaView, 
+  TouchableOpacity, 
+  ImageBackground,
+}  from "react-native";
+
+import styles from './styles.js';
 
 const SearchFriendsScreen = () => {
     return (
+      <>
+      <ImageBackground source={require('../../../assets/images/Background.jpg')}
+        style={styles.ImageBackground}>
         <View>
-            <Text>
-                SearchFriends screen here
-            </Text>
+          <SafeAreaView>
+                <Text>
+                    search screen here
+                </Text>
+          </SafeAreaView>
         </View>
+        </ImageBackground>
+      </>
     )
-}
+  }
 
-export default SearchFriendsScreen;
+  export default SearchFriendsScreen;
