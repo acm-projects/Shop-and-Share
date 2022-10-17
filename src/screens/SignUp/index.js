@@ -19,10 +19,18 @@ export default SignUp = () => {
                 source={require('../../../assets/images/Background.jpg')}
                 style={styles.ImageBackground}
             >
+            
+            {/* onPress -> go back to landing page */}
+            <TouchableOpacity style={styles.CancelContainer}>
+            <Text style={styles.Cancel}>
+                Cancel          
+            </Text>
+             </TouchableOpacity>
+
                 <View style={styles.logoView}>
                     <Image 
                         style={styles.logo}
-                        source={require('../../../assets/images/Logo.png')}
+                        source={require('../../../assets/images/Logo_Full.png')}
                     />
                 </View>
             <View style={styles.centerDisplay}>

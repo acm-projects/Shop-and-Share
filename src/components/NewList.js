@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     },
     scrollView: {
       marginHorizontal: 34,
-      marginTop: 15
+      marginTop: 25
     },
     ListDetailsHeader: {
       fontSize: 17,
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
     CancelButton: {
         alignSelf: "flex-end",
         marginRight: 40,
-        top: 25,
+        top: 20,
         fontFamily: "Montserrat-Bold",
         color: colors.primaryPurple,
         fontSize: 13,

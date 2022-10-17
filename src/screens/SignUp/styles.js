@@ -18,12 +18,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logo: {
-        marginTop: 25,
+        marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center',
-        width: 60,
-        height: 75,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
+        marginBottom: 30
     },
     centerDisplay: {
         marginTop: 25,
@@ -68,6 +67,15 @@ const styles = StyleSheet.create({
         fontVariant: ['underline'],
         
     },
-
+    Cancel: {
+        fontFamily: 'Montserrat-SemiBold',
+        color: colors.pureWhite
+    },
+    CancelContainer: {
+        position: 'absolute',
+        marginLeft: 10,
+        marginTop: 10,
+        fontSize: 12,
+    }
 });
 export default styles;

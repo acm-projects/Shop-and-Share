@@ -3,18 +3,42 @@ import {
   ImageBackground, 
   View,
   Text,
+  Image,
+  StyleSheet
 } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import colors from '../../assets/colors/colors';
 
 
 const AddFriends = () => {
     const [open, setOpen] = useState(false);
+    {/* add functionality for different friends */}
     const [value, setValue] = useState(['Melissa Harper', 'James Smith', 'Henry Jones', 'Phil Adams']);
     const [items, setItems] = useState([
-        {label: 'Melissa Harper', value: 'Melissa Harper'},
-        {label: 'James Smith', value: 'James Smith'},
-        {label: 'Henry Jones', value: 'Henry Jones'},
-        {label: 'Phil Adams', value: 'Phil Adams'}
+        {
+          label: 'Melissa Harper', 
+          value: 'Melissa Harper',
+          icon: () => <Image source={require('../../assets/images/Temporary_Profile_Photo.jpg')}
+                        style={styles.FriendIcons}/>
+        },
+        {
+          label: 'James Smith', 
+          value: 'James Smith',
+          icon: () => <Image source={require('../../assets/images/Temporary_Profile_Photo.jpg')}
+                        style={styles.FriendIcons}/>
+        },
+        {
+          label: 'Henry Jones', 
+          value: 'Henry Jones',
+          icon: () => <Image source={require('../../assets/images/Temporary_Profile_Photo.jpg')}
+                        style={styles.FriendIcons}/>
+        },
+        {
+          label: 'Phil Adams', 
+          value: 'Phil Adams',
+          icon: () => <Image source={require('../../assets/images/Temporary_Profile_Photo.jpg')}
+                        style={styles.FriendIcons}/>
+        }
     ]);
 
     return (
@@ -35,22 +59,12 @@ const AddFriends = () => {
             autoScroll={true}
             maxHeight={180}
             
-            textStyle={{
-                fontSize: 15,
-                fontFamily: 'Montserrat-Regular',
-            }}
+            textStyle={styles.TextStyle}
             placeholder="No friends selected"
-            placeholderStyle={{
-                color: "grey",
-                marginTop: -5,
-                marginBottom: -5
-            }}
+            placeholderStyle={styles.PlaceHolder}
             searchable={true}
             searchPlaceholder="Search your friends"
-            searchContainerStyle={{
-                borderBottomColor: "white",
-                marginBottom: -5
-            }}
+            searchContainerStyle={styles.SearchContainer}
             listMode="MODAL"
             scrollViewProps={{
                 nestedScrollEnabled: true,
@@ -58,21 +72,11 @@ const AddFriends = () => {
             modalProps={{
                 fullScreen: false,
                 animationType: "fade",
+                // transparent: true,
             }}
             modalTitle="Select friends to add"
-            modalContentContainerStyle={{
-                borderRadius: 30,
-                height: 200,
-                marginHorizontal: 30,
-                marginTop: 100,
-                marginBottom: 100,
-                backgroundColor: "white",
-                borderWidth: 10,
-                borderColor: "transparent"
-            }}
-            dropDownContainerStyle={{
-                backgroundColor: "white"
-            }}
+            modalContentContainerStyle={styles.ModalContainer}
+            /* fix this: make activity indicator component? style empty list message */
             ListEmptyComponent={({
                 listMessageContainerStyle, listMessageTextStyle, ActivityIndicatorComponent, loading, message
               }) => (
@@ -90,10 +94,41 @@ const AddFriends = () => {
             theme="LIGHT"
             multiple={true}
             mode="BADGE"
-            badgeDotColors={["#8271EF"]}
+            badgeDotColors={colors.primaryPurple}
         />
         </View>
   );
 }
+
+
+const styles = StyleSheet.create({
+    FriendIcons: {
+      height: 35,
+      width: 35,
+      borderRadius: 30,
+    },
+    ModalContainer: {
+      borderRadius: 30,
+      height: 200,
+      marginHorizontal: 30,
+      marginTop: 30,
+      marginBottom: 100,
+      backgroundColor: colors.pureWhite,
+    },
+    PlaceHolder: {
+      color: "grey",
+      marginTop: -5,
+      marginBottom: -5
+    },
+    SearchContainer: {
+      borderBottomColor: colors.pureWhite,
+      marginBottom: -5
+    },
+    TextStyle: {
+      fontSize: 15,
+      fontFamily: 'Montserrat-Regular',
+    }
+});
+
 
 export default AddFriends;
