@@ -6,7 +6,7 @@ import HomeNoListScreen from '../screens/HomeNoList';
 import SearchFriendsScreen from '../screens/SearchFriends';
 import MyFriendsScreen from '..//screens/MyFriends';
 import ProfileScreen from '../screens/Profile';
-
+import { Platform, StyleSheet, View, Text } from 'react-native';
 
 import { 
   Image,
