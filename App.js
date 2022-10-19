@@ -17,12 +17,13 @@
    View,
  } from 'react-native';
  
+ import Landing from './src/screens/LandingPage/index';
  
  
  const App = () => {
    return (
      <SafeAreaView>
-       <Text>Hello World</Text>
+       <Landing/>
      </SafeAreaView>
    );
  };
