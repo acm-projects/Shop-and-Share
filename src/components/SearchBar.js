@@ -10,6 +10,8 @@ import {
 const SearchableBar = () => {
     return (
       <>
+      {/* look at react-native-dynamic-search-bar package 
+      to add the list you want to search from */}
         <SearchBar
         fontSize={13}
         height={34}

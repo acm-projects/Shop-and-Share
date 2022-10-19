@@ -8,7 +8,8 @@ import {
   SafeAreaView, 
   TouchableOpacity, 
   ImageBackground,
-  Image
+  Image,
+  FlatList
 }  from "react-native";
 
 import styles from './styles.js';
@@ -44,7 +45,7 @@ const SearchFriendsScreen = () => {
                 <Text style={styles.Header}>
                     ADD YOUR CONTACTS
                 </Text>
-              
+
                 <View style={styles.AlignWithButton}>
                   <View style={styles.AlignItems}>
                       <Image source={require('../../../assets/images/Temporary_Profile_Photo.jpg')}

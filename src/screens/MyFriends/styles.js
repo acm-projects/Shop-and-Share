@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       flexDirection: "row"
   },
-  AddButton: {
+  RemoveButton: {
       marginTop: 20,
       marginRight: 10
   },

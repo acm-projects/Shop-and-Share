@@ -57,19 +57,26 @@ const MyFriendsScreen = () => {
                 </View>
               </View>
                 
-              {/*on first press, remove friend; on second press, add friend again*/}
-              <TouchableOpacity onPress={ () => changeImage() }>
-                <Image source={imagePath}
-                      style={styles.AddButton}/>
+              {/*onPress for Accept, remove the friend request from the list and add friend; 
+              onPress for Decline, just remove the friend request from the list*/}
+              <TouchableOpacity style={{marginLeft: 35}}>
+                <Image source={require('../../../assets/images/Accept_Button_White.png')}
+                      style={styles.RemoveButton}/>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image source={require('../../../assets/images/Decline_Button_Black.png')}
+                      style={styles.RemoveButton}/>
               </TouchableOpacity>
             </View>
           </View>
 
 
             <View style={styles.LeftCenter}>
+                <View style={{marginTop: 10}}>
                 <Text style={styles.Header}>
                     YOUR FRIENDS
                 </Text>
+                </View>
 
                 <View style={styles.AlignWithButton}>
                   <View style={styles.AlignItems}>
@@ -88,7 +95,7 @@ const MyFriendsScreen = () => {
               {/*on first press, remove friend; on second press, add friend again*/}
               <TouchableOpacity onPress={ () => changeImage() }>
                 <Image source={imagePath}
-                      style={styles.AddButton}/>
+                      style={styles.RemoveButton}/>
               </TouchableOpacity>
             </View>
 
