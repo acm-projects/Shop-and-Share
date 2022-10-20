@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: "flex-start",
       justifyContent: 'flex-start',
-      marginTop: 20
+      marginTop: 20,
     },
     PinCheckBoxContainer: {
       flexDirection: "row",
@@ -105,22 +105,6 @@ const styles = StyleSheet.create({
       fontSize: 15,
       color: colors.primaryPurple,
       marginLeft: 6,
-    },
-    buttonContainer: {
-      height: 45,
-      backgroundColor: colors.primaryPurple,
-      justifyContent: 'center',
-      borderRadius: 50,
-      elevation:4,
-      width: 289,
-      marginHorizontal: 50,
-      marginBottom: 15
-    },
-    buttonText: {
-      color: colors.pureWhite,
-      fontFamily: 'Montserrat-Medium',
-      textAlign: 'center',
-      fontSize: 20,
     },
     CancelButton: {
         alignSelf: "flex-end",
@@ -133,7 +117,6 @@ const styles = StyleSheet.create({
     AlignDietaryPreferences: {
       flexDirection: "row",
       justifyContent: "space-between"
-      
     },
     DietaryPreference: {
       color: colors.primaryPurple,

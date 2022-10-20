@@ -24,7 +24,7 @@ import styles from './styles';
 import AddItems from '../../components/AddItems';
 
 
-const NewListScreen = () => {
+const EditListScreen = () => {
   const [modalVisible, setModalVisible] = useState(true);
 
   const [date, setDate] = useState(new Date())
@@ -154,21 +154,11 @@ const NewListScreen = () => {
                         style={styles.Checkboxes}
                     />
                     <Text style={styles.PinListText}>
-                      
+                      Pin this list?
                     </Text>
                   </View>
                 </View>
               </ScrollView>
-
-              <View style={styles.buttonContainer}>
-                {/*onpress add list to the home page
-                with all the details */}
-                  <TouchableOpacity>
-                      <Text style={styles.buttonText}>
-                          Create List
-                      </Text>
-                  </TouchableOpacity>
-              </View>
           </View>
         </View>
       </Modal>
@@ -176,5 +166,5 @@ const NewListScreen = () => {
   );
 };
 
-export default NewListScreen;
+export default EditListScreen;
 

@@ -19,6 +19,7 @@ import NewListScreen from './src/screens/NewList';
 import InviteFriends from './src/components/InviteFriends';
 import AddItems from './src/components/AddItems';
 import FriendProfileScreen from './src/screens/FriendProfile';
+import EditListScreen from './src/screens/EditList';
 
 
 const Tab = createBottomTabNavigator();
@@ -28,7 +29,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <NewListScreen />
+      <EditListScreen />
     </NavigationContainer>
   );
 }
