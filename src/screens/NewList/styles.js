@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         paddingTop: 10,
         marginTop: 65,
+        paddingBottom: 40
     },
     ImageBackground: {
         height: "100%",
@@ -44,15 +45,15 @@ const styles = StyleSheet.create({
       backgroundColor: colors.darkDivider,
       width: 320,
       height: 3,
-      marginBottom: 19,
+      marginBottom: 4,
       borderRadius: 3,
     },
     DividerThin: {
       backgroundColor: colors.darkDivider,
       width: 320,
       height: 2,
-      marginBottom: 31,
-      marginTop: 5,
+      marginBottom: 16,
+      marginTop: 8,
       borderRadius: 3,
     },
     scrollView: {
@@ -64,6 +65,7 @@ const styles = StyleSheet.create({
       color: colors.pureBlack,
       fontFamily: 'Montserrat-Medium',
       marginBottom: 12,
+      marginTop: 15,
     },
     ListDetails: {
       fontFamily: 'Montserrat-Regular',
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
       elevation:4,
       width: 289,
       marginHorizontal: 50,
-      marginBottom: 20
+      marginBottom: 15
     },
     buttonText: {
       color: colors.pureWhite,
@@ -133,11 +135,41 @@ const styles = StyleSheet.create({
       marginBottom: -14,
       fontSize: 15,
       width: 270,
-      marginLeft: 5,
+      marginLeft: 23,
+      position: "absolute"
     },
     AddItemContainer: {
       width: 100,
       position: 'absolute',
+    },
+    Testing: {
+      fontFamily: 'Montserrat-Regular',
+      fontSize: 14,
+      color: colors.pureBlack,
+      marginTop: 8,
+      width: 300,
+      paddingRight: 20,
+    },
+    AlignDetailIcons: {
+      flexDirection: "row",
+      justifyContent: "flex-start"
+    },
+    DetailIcons: {
+      marginLeft: -20,
+      marginTop: 10,
+      marginRight: 10
+    },
+    DetailsDivider: {
+      backgroundColor: colors.darkDivider,
+      width: 320,
+      height: 2,
+      marginTop: 8,
+      borderRadius: 3,
+      marginLeft: -20
+    },
+    DetailText: {
+      position: "absolute",
+      marginLeft: -300
     }
 });
 

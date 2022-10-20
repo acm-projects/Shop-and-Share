@@ -15,8 +15,10 @@ import EditProfile from './src/screens/EditProfile';
 import LandingPage from './src/screens/LandingPage';
 import SignUp from './src/screens/SignUp';
 import LogIn from './src/screens/LogIn';
-import NewList from './src/screens/NewList';
+import NewListScreen from './src/screens/NewList';
 import InviteFriends from './src/components/InviteFriends';
+import AddItems from './src/components/AddItems';
+import FriendProfileScreen from './src/screens/FriendProfile';
 
 
 const Tab = createBottomTabNavigator();
@@ -26,7 +28,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <MenuBar />
+      <NewListScreen />
     </NavigationContainer>
   );
 }

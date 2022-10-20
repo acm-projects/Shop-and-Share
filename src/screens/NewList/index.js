@@ -21,9 +21,10 @@ import {
 
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles';
+import AddItems from '../../components/AddItems';
 
 
-const NewList = () => {
+const NewListScreen = () => {
   const [modalVisible, setModalVisible] = useState(true);
 
   const [date, setDate] = useState(new Date())
@@ -111,47 +112,16 @@ const NewList = () => {
                   Add Items
                 </Text>
 
-                        <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
-                          <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
-                            <CheckBox
-                                value={isSelected}
-                                onValueChange={setSelection}
-                                tintColors={{ true: colors.primaryPurple}}
-                                style={styles.Checkboxes}
-                            />
-                            <TextInput
-                            style={styles.ItemName}
-                            placeholder="Item Name"
-                            />
-                          </View>
-                  <Collapse>
-                        <CollapseHeader>
-                              <View style={styles.AlignIcons}>
-                              <Image source={require('../../../assets/images/Add_Item_Icon.png')}/>
-                              </View>
-                        </CollapseHeader>
-                        <CollapseBody styles={styles.AddItemContainer}>
-                          <TextInput
-                          style={styles.ExtraNotes}
-                          placeholder="Brand"
-                          multiline={true}
-                          />
-                        </CollapseBody>
-                    </Collapse>
-                        </View>
-
-              
-
-                <View style={styles.DividerThin}>
-                </View>
-
+                {/* add item component; onPress of add item icon (plus sign button), 
+                call the component again*/}
+                  <AddItems/>
+                  <AddItems/>
 
 
                 <Text style={styles.ListDetailsHeader}>
                   Notes
                 </Text>
 
-                {/* fix invasive keyboard for notes*/}
                   <TextInput
                     style={styles.ExtraNotes}
                     placeholder="Any extra notes?"
@@ -163,6 +133,7 @@ const NewList = () => {
                 
                 <View style={styles.PinContainer}>
                   <View style={styles.PinCheckBoxContainer}>
+                    {/* when checkbox clicked, pin list */}
                     <CheckBox
                         value={isPinned}
                         onValueChange={setPinned}
@@ -192,5 +163,5 @@ const NewList = () => {
   );
 };
 
-export default NewList;
+export default NewListScreen;
 

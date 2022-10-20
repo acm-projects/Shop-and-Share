@@ -21,7 +21,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 const MyFriendsScreen = () => {
   let [flag, setFlag] = React.useState(true);
   let changeImage = () => setFlag(previousState => !previousState);
-  let imagePath= flag ? friendRemove : friendRemoved
+  let imagePath = flag ? friendRemove : friendRemoved
     return (
       <>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}

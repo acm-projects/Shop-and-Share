@@ -18,7 +18,7 @@ LogBox.ignoreLogs([
 
 const AddFriends = () => {
     const [open, setOpen] = useState(false);
-    {/* add functionality for different friends */}
+    {/* add functionality for different friends, make default selection no friends selected */}
     const [value, setValue] = useState(['Melissa Harper', 'James Smith', 'Henry Jones', 'Phil Adams']);
     const [items, setItems] = useState([
         {
@@ -52,7 +52,8 @@ const AddFriends = () => {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 30,
+        marginBottom: 15,
+        marginTop: -7
         }}>
         <DropDownPicker
             open={open}
@@ -61,6 +62,7 @@ const AddFriends = () => {
             setOpen={setOpen}
             setValue={setValue}
             setItems={setItems}
+            defaultValue={false}
             autoScroll={true}
             maxHeight={180}
             textStyle={styles.TextStyle}
