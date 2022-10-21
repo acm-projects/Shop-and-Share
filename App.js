@@ -29,7 +29,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <EditListScreen />
+      <FriendProfileScreen />
     </NavigationContainer>
   );
 }

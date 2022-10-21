@@ -15,35 +15,36 @@ import styles from './styles.js';
 import EditProfile from '../EditProfile/index.js';
 
 const FriendProfileScreen = () => {
-  let [flag, setFlag] = React.useState(true);
-  let changeImage = () => setFlag(previousState => !previousState);
-  let imagePath= flag ? "Add Friend" : "Remove Friend"
+  let [text, setText] = React.useState(true);
+  let changeText = () => setText(previousState => !previousState);
+  let buttonText= text ? "Add Friend" : "Remove Friend"
     return (
       <>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
         <View>
           <SafeAreaView>
-                <Text style={styles.WelcomeMessage}>
-                    Welcome Back, 
+
+              {/* onPress -> exit friend's profile */}
+              <TouchableOpacity style={styles.CancelContainer}>
+                  <Image source={require('../../../assets/images/X_Button_White.png')}/>
+              </TouchableOpacity>
+
+                <Text style={styles.FriendDisplayName}>
+                    Melissa Harper
                 </Text>
-              {/* add functionality to change this first name/display name*/}
-                <Text style={styles.FirstName}>
-                    Melissa
-                </Text>
-                <Text style={styles.ExclamationPoint}>
-                    !
+              {/* add variable for friend's display or full name */}
+                <Text style={styles.FriendUsername}>
+                    m.harper
                 </Text>
 
-                {/* add functionality to change the profile image later */}
-                <View style={styles.ProfilePhotoShadow}>
-                </View>
+                <View style={styles.ProfilePhotoShadow}/>
 
                 <Image 
-                style={styles.ProfilePhoto}
+                style={styles.FriendProfilePhoto}
                 source={require('../../../assets/images/Temporary_Profile_Photo.jpg')}/>  
 
-                {/* add functionality to the number of lists and groups later*/}
+                {/* add variables for number of lists and groups*/}
                 <View style={styles.NumbersContainer}>
                   <Text style={styles.ListsNumber}>
                     72
@@ -62,25 +63,26 @@ const FriendProfileScreen = () => {
                   </Text>
                 </View>
 
-                {/* onPress -> open edit profile component (make isVisible true)*/}
-                <View style={styles.EditProfileContainer}>
-                <TouchableOpacity onPress={ () => setStatus(!status) }>
-                    <Text style={styles.EditProfileButton}>
-                        imagePath
+                <View style={styles.AddFriendContainer}>
+                {/* on first press, add user to your friends. on second press,
+                remove them from your friends */}
+                <TouchableOpacity onPress={ () => changeText() }>
+                    <Text style={styles.AddFriendButton}>
+                        {buttonText}
                     </Text>  
                 </TouchableOpacity>
               </View>
 
-                <View style={styles.ProfileDetailsContainer}>
-                </View>
+                <View style={styles.ProfileDetailsContainer}/>
 
                 <Text style={styles.ProfileHeader}>
                   PROFILE
                 </Text>
 
                 <View style={styles.positionButtons}>
-                    <View style={styles.DividerThick}>
-                    </View>
+                    <View style={styles.DividerThick}/>
+                
+                {/* add navigation onPress to these buttons */}
                   <TouchableOpacity>
                       <Text style={styles.ButtonFormat}>
                           Shared Lists
@@ -90,10 +92,8 @@ const FriendProfileScreen = () => {
                           source={require('../../../assets/images/Profile_Button_Arrows.png')}/>
                   </TouchableOpacity>
 
-                    <View style={styles.DividerThin}>
-                    </View>
+                    <View style={styles.DividerThin}/>
 
-                  {/* onPress -> go to the friend's dietary restrictions */}
                   <TouchableOpacity>
                       <Text style={styles.ButtonFormat}>
                           Dietary Restrictions
@@ -103,8 +103,7 @@ const FriendProfileScreen = () => {
                           source={require('../../../assets/images/Profile_Button_Arrows.png')}/>
                   </TouchableOpacity>
 
-                    <View style={styles.DividerThick}>
-                    </View>
+                    <View style={styles.DividerThick}/>
 
                 </View>
           </SafeAreaView>
