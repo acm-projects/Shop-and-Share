@@ -154,7 +154,7 @@ const NewListScreen = () => {
                         style={styles.Checkboxes}
                     />
                     <Text style={styles.PinListText}>
-                      
+                      Pin this list?
                     </Text>
                   </View>
                 </View>
