@@ -47,6 +47,8 @@ const EditListScreen = () => {
           <View style={styles.ModalView}>
           <View style={styles.NewListContainer}>
               </View>
+              {/* button already closes the modal, but make sure that
+              none of the changes are saved if they click this */}
                 <TouchableOpacity
                 onPress={() => setModalVisible(!modalVisible)}>
                 <Image style={styles.CancelButton}
@@ -131,7 +133,6 @@ const EditListScreen = () => {
                 call the component again*/}
                   <AddItems/>
 
-
                 <Text style={styles.ListDetailsHeader}>
                   Notes
                 </Text>
@@ -159,6 +160,15 @@ const EditListScreen = () => {
                   </View>
                 </View>
               </ScrollView>
+
+              <View style={styles.buttonContainer}>
+                {/*onpress save any changes made to the list */}
+                  <TouchableOpacity>
+                      <Text style={styles.buttonText}>
+                          Save Changes
+                      </Text>
+                  </TouchableOpacity>
+              </View>
           </View>
         </View>
       </Modal>

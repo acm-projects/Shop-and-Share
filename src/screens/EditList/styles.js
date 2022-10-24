@@ -130,7 +130,23 @@ const styles = StyleSheet.create({
       fontFamily: "Montserrat-Regular",
       marginRight: 5,
       marginBottom: -3,
-    }
+    },
+    buttonContainer: {
+      height: 45,
+      backgroundColor: colors.primaryPurple,
+      justifyContent: 'center',
+      borderRadius: 50,
+      elevation:4,
+      width: 289,
+      marginHorizontal: 50,
+      marginBottom: 15
+    },
+    buttonText: {
+      color: colors.pureWhite,
+      fontFamily: 'Montserrat-Medium',
+      textAlign: 'center',
+      fontSize: 20,
+    },
 });
 
 export default styles;
