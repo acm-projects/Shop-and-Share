@@ -18,12 +18,13 @@
  } from 'react-native';
  
  import Landing from './src/screens/LandingPage/index';
- 
+ import LogIn from './src/screens/LogIn/index'
+ import SignUp from './src/screens/SignUp/index'
  
  const App = () => {
    return (
      <SafeAreaView>
-       <Landing/>
+       <SignUp/>
      </SafeAreaView>
    );
  };
