@@ -8,11 +8,9 @@ import { Collapse, CollapseHeader, CollapseBody } from "accordion-collapse-react
 
 
 import {
-    Button, 
     Modal, 
     StyleSheet, 
     Text, 
-    Touchable, 
     TouchableOpacity, 
     View,
     Image,

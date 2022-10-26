@@ -9,7 +9,6 @@ import {
   TouchableOpacity, 
   ImageBackground,
   Image,
-  FlatList
 }  from "react-native";
 
 import styles from './styles.js';
