@@ -17,12 +17,13 @@ import {
   View,
 } from 'react-native';
 import LandingPage from './src/screens/LandingPage';
-
+import LogIn from './src/screens/LogIn/index'
+import SignUp from './src/screens/SignUp/index'
 
 const App = () => {
   return (
     <SafeAreaView>
-      <LandingPage />
+      <SignUpPage />
     </SafeAreaView>
   );
 };
