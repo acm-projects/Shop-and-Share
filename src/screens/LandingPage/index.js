@@ -60,7 +60,7 @@ export default Landing = () => {
                     <TouchableOpacity>
                         <View style={styles.box2}>
                             <Text style={styles.sectionBottom}>
-                                Create Account
+                                Log In
                             </Text>
                         </View>
                     </TouchableOpacity>

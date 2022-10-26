@@ -6,31 +6,29 @@
  * @flow strict-local
  */
 
- import React from 'react';
- import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
-   StyleSheet,
-   Text,
-   useColorScheme,
-   View,
- } from 'react-native';
- 
- import Landing from './src/screens/LandingPage/index';
- 
- 
- const App = () => {
-   return (
-     <SafeAreaView>
-       <Landing/>
-     </SafeAreaView>
-   );
- };
- 
- const styles = StyleSheet.create({
-   
- });
- 
- export default App;
- 
+import React from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+import LandingPage from './src/screens/LandingPage';
+
+
+const App = () => {
+  return (
+    <SafeAreaView>
+      <LandingPage />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+
+});
+
+export default App;
