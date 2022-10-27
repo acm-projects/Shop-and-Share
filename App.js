@@ -23,7 +23,7 @@ import SignUp from './src/screens/SignUp/index'
 const App = () => {
   return (
     <SafeAreaView>
-      <SignUpPage />
+      <SignUp/>
     </SafeAreaView>
   );
 };
