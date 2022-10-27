@@ -33,6 +33,7 @@ export default SignUp = () => {
                         source={require('../../../assets/images/Logo_Full.png')}
                     />
                 </View>
+
             <View style={styles.centerDisplay}>
                 <Text style={styles.sectionTitle}>
                     Create your account.
