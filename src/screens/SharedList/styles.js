@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     },
     centerDisplay: {
         paddingBottom: 150,
+        paddingHorizontal: 13,
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'space-between',
@@ -100,6 +101,16 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: colors.lpurp,
         fontFamily: 'Montserrat-SemiBold',
+    },
+    Cancel: {
+        fontFamily: 'Montserrat-SemiBold',
+        color: colors.pureWhite
+    },
+    CancelContainer: {
+        position: 'absolute',
+        marginLeft: 10,
+        marginTop: 10,
+        fontSize: 12,
     }
   });
 

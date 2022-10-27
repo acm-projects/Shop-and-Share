@@ -15,8 +15,9 @@ import {
 
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
+import SearchableBar from '../../components/SearchBar.js';
 
-export default Landing = () => {
+export default ViewList = () => {
     return (
         <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
@@ -25,15 +26,8 @@ export default Landing = () => {
             </Text>
         <View style={styles.containter}>
             <View style={styles.centerDisplay}>
-                <View style={styles.box}>
-                    <Image 
-                        source={require('../../../assets/images/Search_Inactive_Icon.png')}
-                        style={{marginRight: 5, width: 12, height: 12}}
-                    />
-                    <Text style= {styles.sectionBottom}>
-                        Search
-                    </Text>
-                </View>
+                <SearchableBar/>
+                <TouchableOpacity>
                 <View style={styles.box2}>
                     <Image 
                         source={require('../../../assets/images/Pin.png')}
@@ -46,6 +40,8 @@ export default Landing = () => {
                         Oct 07 2022
                     </Text>
                 </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
                 <View style={styles.box2}>
                     <Text style={styles.sectionList}>
                         List Name
@@ -54,6 +50,8 @@ export default Landing = () => {
                         Oct 07 2022
                     </Text>
                 </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
                 <View style={styles.box2}>
                     <Text style={styles.sectionList}>
                         List Name
@@ -62,6 +60,7 @@ export default Landing = () => {
                         Oct 07 2022
                     </Text>
                 </View>
+                </TouchableOpacity>
             </View>
             <TouchableOpacity>
                     <View style={styles.addListButton}>
