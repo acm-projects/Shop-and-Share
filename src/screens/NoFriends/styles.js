@@ -12,8 +12,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     height: "100%",
     width: "100%",
-    //justifyContent: 'center',
-    //alignItems: 'center',
   },
   Image: {
     height: "20%",
@@ -136,6 +134,12 @@ const styles = StyleSheet.create({
     paddingLeft: 35,
     paddingBottom: 10,
     marginTop: 370,
+  },
+
+  inviteContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginHorizontal: 10,
   }
 });
 
