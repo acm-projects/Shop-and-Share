@@ -4,15 +4,21 @@ import {
   View,
   Text,
   Image,
-  StyleSheet
+  StyleSheet,
+  LogBox
 } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import colors from '../../assets/colors/colors';
 
+// ignore warning that makes modal transparent
+LogBox.ignoreLogs([
+  "Modal with 'fullScreen'"
+])
+
 
 const AddFriends = () => {
     const [open, setOpen] = useState(false);
-    {/* add functionality for different friends */}
+    {/* add functionality for different friends, make default selection no friends selected */}
     const [value, setValue] = useState(['Melissa Harper', 'James Smith', 'Henry Jones', 'Phil Adams']);
     const [items, setItems] = useState([
         {
@@ -43,11 +49,11 @@ const AddFriends = () => {
 
     return (
         <View style={{
-        backgroundColor: 'white',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 30,
+        marginBottom: 15,
+        marginTop: -7
         }}>
         <DropDownPicker
             open={open}
@@ -56,9 +62,9 @@ const AddFriends = () => {
             setOpen={setOpen}
             setValue={setValue}
             setItems={setItems}
+            defaultValue={false}
             autoScroll={true}
             maxHeight={180}
-            
             textStyle={styles.TextStyle}
             placeholder="No friends selected"
             placeholderStyle={styles.PlaceHolder}
@@ -72,7 +78,7 @@ const AddFriends = () => {
             modalProps={{
                 fullScreen: false,
                 animationType: "fade",
-                // transparent: true,
+                transparent: true,
             }}
             modalTitle="Select friends to add"
             modalContentContainerStyle={styles.ModalContainer}
@@ -97,6 +103,7 @@ const AddFriends = () => {
             badgeDotColors={colors.primaryPurple}
         />
         </View>
+
   );
 }
 
@@ -106,14 +113,13 @@ const styles = StyleSheet.create({
       height: 35,
       width: 35,
       borderRadius: 30,
+      marginVertical: 5
     },
     ModalContainer: {
-      borderRadius: 30,
-      height: 200,
-      marginHorizontal: 30,
-      marginTop: 30,
-      marginBottom: 100,
+      borderRadius: 50,
+      padding: 30,
       backgroundColor: colors.pureWhite,
+      marginTop: 65
     },
     PlaceHolder: {
       color: "grey",
@@ -127,7 +133,7 @@ const styles = StyleSheet.create({
     TextStyle: {
       fontSize: 15,
       fontFamily: 'Montserrat-Regular',
-    }
+    },
 });
 
 

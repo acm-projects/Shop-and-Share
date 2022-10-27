@@ -14,7 +14,7 @@ import styles from "./styles";
 
 export default SignUp = () => {
     return (
-        <View style={styles.container}>
+        <View>
             <ImageBackground
                 source={require('../../../assets/images/Background.jpg')}
                 style={styles.ImageBackground}
