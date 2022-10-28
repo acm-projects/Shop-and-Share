@@ -1,82 +1,102 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { 
-  StyleSheet, 
-  Text, 
-  View, 
-  SafeAreaView, 
-  TouchableOpacity, 
-  Image,
-  ImageBackground,
-}  from "react-native";
+import {
+  StyleSheet,
+} from "react-native";
 
-import colors from '../../../assets/colors/colors.js';
-import styles from './styles.js';
+import colors from '../../../assets/colors/colors';
 
-const SetDietaryRestrictions = () => {
-    return (
-      <>
-      <ImageBackground source={require('../../../assets/images/Background.jpg')}
-        style={styles.ImageBackground}>
-        <View>
-          <SafeAreaView>
+const styles = StyleSheet.create({
+    ImageBackground: {
+        height: "100%",
+        width: "100%",
+    },
+    cancelText: {  
+        color: colors.pureWhite,      
+        fontFamily: 'Montserrat-Medium',
+        position: 'absolute',
+           left: 10,
+           top: 8,
+    },
+    saveText: {  
+        color: colors.pureWhite,      
+        fontFamily: 'Montserrat-Bold',
+        position: 'absolute',
+           left: 345,
+           top: 8,
+    },
+    Title: {  
+        color: colors.pureWhite,      
+        fontFamily: 'Montserrat-Bold',
+        position: 'absolute',
+           left: 30,
+           top: 60,
+        fontSize: 32,
+    },
+    Text: {
+        fontFamily: 'Montserrat-SemiBold',
+        color: colors.pureBlack,
+        position: 'absolute',
+            left: 16,
+            top: 10,
+        alignSelf: "flex-end",
+        fontSize: 16,
+        paddingBottom: 10,
+    },
 
-              <View style={styles.EditProfileContainer}>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('HomeNoList')}
-                >
-                    <Text style={styles.cancelText}>
-                    Cancel
-                    </Text>
-                </TouchableOpacity>
-              </View>
+    Description: {
+        fontFamily: 'Montserrat-Medium',
+        color: colors.pureBlack,
+        position: 'absolute',
+            left: 16,
+            top: 32,
+        alignSelf: "flex-end",
+        fontSize: 16,
+        paddingBottom: 10,
+    },
 
-                <Text style={styles.Title}>
-                    Melissa's Dietary Restrictions
-                    </Text>
+    nutContainer: {
+        height: 100,
+        width: 160,
+        position: 'absolute',
+            right: 206,
+            top: 160,
+        backgroundColor: colors.pureWhite,
+        borderRadius: 18,
+    },
 
-                    <View style={styles.nutContainer}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    >
-                      <Text style={styles.Text}>
-                          Nut Allergy
-                      </Text>  
-                      <Text style={styles.Description}>
-                          Peanuts
-                      </Text> 
-                  </TouchableOpacity>
-                </View>
+    fishContainer: {
+        height: 100,
+        width: 160,
+        position: 'absolute',
+            right: 25,
+            top: 160,
+        backgroundColor: colors.pureWhite,
+        borderRadius: 18,
+        elevation: 0,
+        borderWidth: 1,
+        borderColor: "#C7C7C7",
+    },
 
-                <View style={styles.fishContainer}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    >
-                      <Text style={styles.Text}>
-                          Fish Allergy
-                      </Text>  
-                      <Text style={styles.Description}>
-                            Salmon
-                      </Text>  
-                  </TouchableOpacity>
-                </View>
+    vegContainer: {
+        height: 100,
+        width: 160,
+        position: 'absolute',
+            right: 206,
+            top: 275,
+        backgroundColor: colors.pureWhite,
+        borderRadius: 18,
+    },
 
-                <View style={styles.vegContainer}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    >
-                      <Text style={styles.Text}>
-                          Vegetarian
-                      </Text>  
-                  </TouchableOpacity>
-                </View>
 
-          </SafeAreaView>
-        </View>
-        </ImageBackground>
-      </>
-    )
-  }
+    saveButtonText: {
+        color: colors.black,
+        fontFamily: 'Montserrat-Medium',
+        textAlign: 'center',
+        fontSize: 16,
+        paddingTop: 9,
+    },
+});
 
-  export default SetDietaryRestrictions;
+export default styles;
