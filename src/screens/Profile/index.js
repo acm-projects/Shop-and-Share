@@ -16,7 +16,7 @@ import EditProfile from '../EditProfile/index.js';
 
 const ProfileScreen = () => {
     return (
-      <>
+      <SafeAreaView>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
         <View>
@@ -134,7 +134,7 @@ const ProfileScreen = () => {
           </SafeAreaView>
         </View>
         </ImageBackground>
-      </>
+      </SafeAreaView>
     )
   }
 

@@ -23,7 +23,7 @@ const MyFriendsScreen = () => {
   let changeImage = () => setFlag(previousState => !previousState);
   let imagePath = flag ? friendRemove : friendRemoved
     return (
-      <>
+      <SafeAreaView>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
         <View>
@@ -104,7 +104,7 @@ const MyFriendsScreen = () => {
           </SafeAreaView>
         </View>
         </ImageBackground>
-      </>
+      </SafeAreaView>
     )
   }
 

@@ -25,7 +25,7 @@ const SearchFriendsScreen = () => {
   let imagePath= flag ? friendAdd : friendAdded
 
     return (
-      <>
+      <SafeAreaView>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
         <View>
@@ -72,7 +72,7 @@ const SearchFriendsScreen = () => {
           </SafeAreaView>
         </View>
         </ImageBackground>
-      </>
+      </SafeAreaView>
     )
   }
 
