@@ -33,7 +33,7 @@ const SetDietaryRestrictions = () => {
               </View>
 
                 <Text style={styles.Title}>
-                    Melissa's Dietary          Restrictions
+                    Melissa's Dietary Restrictions
                     </Text>
 
                     <View style={styles.nutContainer}>
@@ -44,7 +44,7 @@ const SetDietaryRestrictions = () => {
                           Nut Allergy
                       </Text>  
                       <Text style={styles.Description}>
-                          - Peanuts
+                          Peanuts
                       </Text> 
                   </TouchableOpacity>
                 </View>
@@ -57,12 +57,12 @@ const SetDietaryRestrictions = () => {
                           Fish Allergy
                       </Text>  
                       <Text style={styles.Description}>
-                          - Salmon
+                            Salmon
                       </Text>  
                   </TouchableOpacity>
                 </View>
 
-                <View style={styles.veganContainer}>
+                <View style={styles.vegContainer}>
                   <TouchableOpacity
                     onPress={() => {}}
                     >
