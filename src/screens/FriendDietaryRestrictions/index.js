@@ -14,7 +14,7 @@ import {
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
 
-const ViewDietaryRestrictions = () => {
+const FriendDietaryRestrictions = () => {
     return (
       <>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
@@ -33,12 +33,9 @@ const ViewDietaryRestrictions = () => {
               </View>
 
                 <Text style={styles.Title}>
-                    My Dietary Restrictions
+                    Melissa's Dietary Restrictions
                     </Text>
 
-                <TouchableOpacity
-                onPress={() => {}}
-                >
                     <View style={styles.nutContainer}>
                       <Text style={styles.Text}>
                           Nut Allergy
@@ -47,11 +44,7 @@ const ViewDietaryRestrictions = () => {
                           Peanuts
                       </Text> 
                 </View>
-                </TouchableOpacity>
 
-                <TouchableOpacity
-                    onPress={() => {}}
-                    >
                 <View style={styles.fishContainer}>
                       <Text style={styles.Text}>
                           Fish Allergy
@@ -60,18 +53,13 @@ const ViewDietaryRestrictions = () => {
                             Salmon
                       </Text>  
                 </View>
-                </TouchableOpacity>
 
 
-                <TouchableOpacity
-                    onPress={() => {}}
-                    >
                 <View style={styles.vegContainer}>
                       <Text style={styles.Text}>
                           Vegetarian
                       </Text>  
                 </View>
-                </TouchableOpacity>
 
 
           </SafeAreaView>
@@ -81,4 +69,4 @@ const ViewDietaryRestrictions = () => {
     )
   }
 
-  export default ViewDietaryRestrictions;
+  export default FriendDietaryRestrictions;
