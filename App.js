@@ -1,31 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 
- import React from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
 
- //import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
- import { NavigationContainer } from '@react-navigation/native';
- //import { createStackNavigator } from '@react-navigation/stack';
- 
- import MenuBar from './src/components/MenuBar.js';
- //import NewListScreen from './src/screens/NewList';
+import LandingPage from './src/screens/LandingPage/index'
 
- //const Tab = createBottomTabNavigator();
- //const Stack = createStackNavigator();
- 
- const App = () => {
-   return (
-     <NavigationContainer>
-      <MenuBar />
-     </NavigationContainer>
-   );
- }
+const App = () => {
+  return (
+    <SafeAreaView>
+      <LandingPage />
+    </SafeAreaView>
+  );
+};
 
+const styles = StyleSheet.create({
 
- export default App;
- 
+});
