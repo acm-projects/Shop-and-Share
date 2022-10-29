@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeNoListScreen from '../screens/HomeNoList';
 import SearchFriendsScreen from '../screens/SearchFriends';
-import MyFriendsScreen from '..//screens/MyFriends';
+import NoFriendsScreen from '../screens/NoFriends';
 import ProfileScreen from '../screens/Profile';
-
+import { Platform, StyleSheet, View, Text } from 'react-native';
 
 import { 
   Image,
@@ -42,7 +42,7 @@ const MenuBar = () => {
 
       <Tab.Screen name="Home" component={HomeNoListScreen} options={{ headerShown: false}} />
       <Tab.Screen name="Search" component={SearchFriendsScreen} options={{ headerShown: false}} />
-      <Tab.Screen name="Friends" component={MyFriendsScreen} options={{ headerShown: false}} />
+      <Tab.Screen name="Friends" component={NoFriendsScreen} options={{ headerShown: false}} />
       <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false}} />
 
     </Tab.Navigator>
