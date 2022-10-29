@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     },
     CenterItems: {
       alignItems: "center",
+      marginBottom: 90,
     },
     Logo: {
       marginTop: 10,
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
       borderRadius: 14,
       width: 353
   },
-  DisplayName: {
+    DisplayName: {
       fontFamily: "Montserrat-Bold",
       fontSize: 12,
       color: colors.pureWhite,
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
       width: 45,
       height: 45,
       borderRadius: 50,
-      marginTop: 10
+      marginVertical: 10,
   },
   AlignItems: {
       justifyContent: "flex-start",
@@ -60,12 +61,11 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       flexDirection: "row"
   },
-  AddButton: {
+  RemoveButton: {
       marginTop: 20,
       marginRight: 10
   },
   ScrollableSection: {
-    marginTop: 90,
     marginHorizontal: 23,
     height: 490
   }

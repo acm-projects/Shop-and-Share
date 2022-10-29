@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 
 import { 
   StyleSheet,   
@@ -37,20 +36,6 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontSize: 20,
     },
-  
-    bottomBarWrap:{
-      position: 'absolute',
-      flexDirection:'row',
-      marginTop: 377,
-    },
-  
-    bottomBarIcons:{
-      flex:1,
-      justifyContent: 'space-around',
-      paddingLeft:35,
-      paddingBottom: 10,
-      marginTop: 370,
-    }
   });
 
   export default styles;

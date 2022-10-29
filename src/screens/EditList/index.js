@@ -22,7 +22,7 @@ import styles from './styles';
 import AddItems from '../../components/AddItems';
 
 
-const NewListScreen = () => {
+const EditListScreen = () => {
   const [modalVisible, setModalVisible] = useState(true);
 
   const [date, setDate] = useState(new Date())
@@ -45,6 +45,8 @@ const NewListScreen = () => {
           <View style={styles.ModalView}>
           <View style={styles.NewListContainer}>
               </View>
+              {/* button already closes the modal, but make sure that
+              none of the changes are saved if they click this */}
                 <TouchableOpacity
                 onPress={() => setModalVisible(!modalVisible)}>
                 <Image style={styles.CancelButton}
@@ -129,7 +131,6 @@ const NewListScreen = () => {
                 call the component again*/}
                   <AddItems/>
 
-
                 <Text style={styles.ListDetailsHeader}>
                   Notes
                 </Text>
@@ -159,11 +160,10 @@ const NewListScreen = () => {
               </ScrollView>
 
               <View style={styles.buttonContainer}>
-                {/*onpress add list to the home page
-                with all the details */}
+                {/*onpress save any changes made to the list */}
                   <TouchableOpacity>
                       <Text style={styles.buttonText}>
-                          Create List
+                          Save Changes
                       </Text>
                   </TouchableOpacity>
               </View>
@@ -174,5 +174,5 @@ const NewListScreen = () => {
   );
 };
 
-export default NewListScreen;
+export default EditListScreen;
 

@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 const MenuBar = () => {
   return (
-    <>
+    <NavigationContainer>
       <Tab.Navigator 
         screenOptions={({route, navigation}) => ({
           tabBarShowLabel: false,
@@ -45,8 +45,8 @@ const MenuBar = () => {
       <Tab.Screen name="Friends" component={NoFriendsScreen} options={{ headerShown: false}} />
       <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false}} />
 
-      </Tab.Navigator>
-    </>
+    </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 

@@ -11,17 +11,17 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
     },
-    FirstName: {
-        fontFamily: 'Montserrat-Bold',
+    FriendUsername: {
+        fontFamily: 'Montserrat-Regular',
         fontSize: 18,
         textAlign: 'right',
         position: 'absolute',
-            right: 35,
+            right: 30,
             top: 82,
         color: colors.pureWhite
     },
-    WelcomeMessage: {
-        fontFamily: 'Montserrat-Regular',
+    FriendDisplayName: {
+        fontFamily: 'Montserrat-Bold',
         fontSize: 18,
         position: 'absolute',
             right: 30,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
             top: 82,
         color: colors.pureWhite
     },
-    ProfilePhoto: {
+    FriendProfilePhoto: {
         borderRadius: 50,
         borderWidth: 5,
         borderColor: colors.pureWhite,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
             left: 33,
             top: 36,
     },
-    EditProfileContainer: {
+    AddFriendContainer: {
         height: 29,
         width: 115,
         backgroundColor: colors.pureWhite,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         marginTop: 201,
         marginLeft: 140,
     },
-    EditProfileButton: {
+    AddFriendButton: {
         color: colors.secondaryPurple,
         fontFamily: 'Montserrat-Medium',
         textAlign: 'center',
@@ -158,6 +158,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
             left: 350,
         marginTop: 13,
+    },
+    CancelContainer: {
+        position: 'absolute',
+        marginLeft: 360,
+        marginTop: 15,
     }
   });
 

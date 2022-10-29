@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: "flex-start",
       justifyContent: 'flex-start',
-      marginTop: 20
+      marginTop: 20,
     },
     PinCheckBoxContainer: {
       flexDirection: "row",
@@ -105,6 +105,31 @@ const styles = StyleSheet.create({
       fontSize: 15,
       color: colors.primaryPurple,
       marginLeft: 6,
+    },
+    CancelButton: {
+        alignSelf: "flex-end",
+        marginRight: 40,
+        top: 20,
+        fontFamily: "Montserrat-Bold",
+        color: colors.primaryPurple,
+        fontSize: 13,
+    },
+    AlignDietaryPreferences: {
+      flexDirection: "row",
+      justifyContent: "space-between"
+    },
+    DietaryPreference: {
+      color: colors.primaryPurple,
+      fontSize: 14,
+      fontFamily: "Montserrat-Medium",
+      marginBottom: -3,
+    },
+    FriendName: {
+      color: "grey",
+      fontSize: 14,
+      fontFamily: "Montserrat-Regular",
+      marginRight: 5,
+      marginBottom: -3,
     },
     buttonContainer: {
       height: 45,
@@ -122,32 +147,6 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontSize: 20,
     },
-    CancelButton: {
-        alignSelf: "flex-end",
-        marginRight: 40,
-        top: 20,
-        fontFamily: "Montserrat-Bold",
-        color: colors.primaryPurple,
-        fontSize: 13,
-    },
-    AlignDietaryPreferences: {
-      flexDirection: "row",
-      justifyContent: "space-between"
-      
-    },
-    DietaryPreference: {
-      color: colors.primaryPurple,
-      fontSize: 14,
-      fontFamily: "Montserrat-Medium",
-      marginBottom: -3,
-    },
-    FriendName: {
-      color: "grey",
-      fontSize: 14,
-      fontFamily: "Montserrat-Regular",
-      marginRight: 5,
-      marginBottom: -3,
-    }
 });
 
 export default styles;
