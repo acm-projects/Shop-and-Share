@@ -18,6 +18,7 @@
     "@react-native-firebase/firestore": "^16.2.0",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.1",
     "@react-navigation/stack": "^6.3.2",
     "accordion-collapse-react-native": "^1.1.1",
     "react": "18.1.0",

@@ -16,15 +16,43 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import LandingPage from './src/screens/LandingPage';
-import LogIn from './src/screens/LogIn/index'
-import SignUp from './src/screens/SignUp/index'
+import LogIn from './src/screens/LogIn/index';
+import SignUp from './src/screens/SignUp/index';
+import HomeNoListScreen from './src/screens/HomeNoList';
+
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <SignUp/>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Landing Page"
+          component={LandingPage}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Log In"
+          component={LogIn}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Sign Up"
+          component={SignUp}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={HomeNoListScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
