@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 import colors from "../../../assets/colors/colors";
-const styles = StyleSheet.create({ 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
     ImageBackground: {
         width: '100%',
         height: '100%',
@@ -8,7 +11,7 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 24,
         color: colors.dark,
-        fontFamily: 'Montserrat-Bold', 
+        fontFamily: 'Montserrat-Bold',
         alignItems: 'center',
     },
     logoView: {
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
         paddingBottom: 650,
         borderRadius: 20,
         flexDirection: 'column',
-        width:"100%",
+        width: "100%",
         backgroundColor: colors.light,
     },
     input: {
@@ -46,13 +49,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 10,
         marginTop: 20
-      },
+    },
     buttonText: {
         color: colors.pureWhite,
         fontFamily: 'Montserrat-Medium',
         textAlign: 'center',
         fontSize: 16,
-      },
+    },
     forgotPass: {
         marginLeft: 15,
         fontFamily: 'Montserrat-Regular',
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
         marginTop: 5,
         fontFamily: 'Montserrat-Bold',
         fontVariant: ['underline'],
-        
+
     },
     Cancel: {
         fontFamily: 'Montserrat-SemiBold',
