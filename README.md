@@ -98,3 +98,23 @@ At times, it can get difficult to manage grocery lists in households. Shop&amp;S
 | 9        | Presentation and practice |decide order of presenters, style of slide deck, write down a script |
 | 10       | Finalize presentation and practice | N/A |
 | Presentation week! | Wow the judges! I believe in you :) | :blue_heart::blue_heart::blue_heart: |
+
+# Instructions to Run Application
+npx react-native start → starts the Metro server
+npx react-native run-android → opens the emulator and installs the app1
+
+# GITHUB Basics
+git init → initializing an existing directory as a Git Repository
+git clone [url] → retrieving an existing remote repository into your local environment
+git add:
+git add <filename> → adds specific file
+git add . → adds all unstaged files
+git commit -m “<descriptive message>” → commits the staged/added content as a new commit snapshot
+git push → transmits local branch commits
+git branch <branch-name> → creates a new branch from the one you’re on currently
+git checkout <branch-name> → goes to the given branch
+Most times, you cannot checkout unless you’ve committed and pushed the code from your current branch
+git pull → fetches and merges any commits made remotely (or by other members)
+Be careful while pulling! Sometimes, code can be overwritten if two people work and commit code on the same branch
+git status → tells you which branch you’re on and what files are staged or not staged
+

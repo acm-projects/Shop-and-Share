@@ -16,7 +16,7 @@ import EditProfile from '../EditProfile/index.js';
 
 const ProfileScreen = () => {
     return (
-      <>
+      <SafeAreaView>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
         <View>
@@ -59,11 +59,9 @@ const ProfileScreen = () => {
                   </Text>
                 </View>
 
-                {/* onPress -> open edit profile component (make isVisible true)*/}
+                {/* onPress -> open edit profile component */}
                 <View style={styles.EditProfileContainer}>
-                <TouchableOpacity
-                    onPress={() => {}}
-                    >
+                <TouchableOpacity>
                     <Text style={styles.EditProfileButton}>
                         Edit Profile
                     </Text>  
@@ -78,8 +76,9 @@ const ProfileScreen = () => {
                 </Text>
 
                 <View style={styles.positionButtons}>
-                    <View style={styles.DividerThick}>
-                    </View>
+                    <View style={styles.DividerThick}/>
+                    
+                {/* fix navigation onPress for these buttons */}
                   <TouchableOpacity
                       onPress={() => navigation.navigate('My Home')}
                       >
@@ -91,8 +90,7 @@ const ProfileScreen = () => {
                           source={require('../../../assets/images/Profile_Button_Arrows.png')}/>
                   </TouchableOpacity>
 
-                    <View style={styles.DividerThin}>
-                    </View>
+                  <View style={styles.DividerThin}/>
 
                   <TouchableOpacity
                       onPress={() => navigation.navigate('View Dietary Restrictions')}
@@ -105,8 +103,7 @@ const ProfileScreen = () => {
                           source={require('../../../assets/images/Profile_Button_Arrows.png')}/>
                   </TouchableOpacity>
 
-                    <View style={styles.DividerThick}>
-                    </View>
+                    <View style={styles.DividerThick}/>
 
                   <TouchableOpacity
                       onPress={() => navigation.navigate('Reset Password')}
@@ -119,8 +116,7 @@ const ProfileScreen = () => {
                           source={require('../../../assets/images/Profile_Button_Arrows.png')}/>
                   </TouchableOpacity>
 
-                    <View style={styles.DividerThick}>
-                    </View>
+                    <View style={styles.DividerThick}/>
 
                   <TouchableOpacity
                       onPress={() => navigation.navigate('Sign Out')}
@@ -133,13 +129,12 @@ const ProfileScreen = () => {
                           source={require('../../../assets/images/Profile_Button_Arrows.png')}/>
                   </TouchableOpacity>
 
-                   <View style={styles.DividerThick}>
-                    </View>
+                   <View style={styles.DividerThick}/>
                 </View>
           </SafeAreaView>
         </View>
         </ImageBackground>
-      </>
+      </SafeAreaView>
     )
   }
 

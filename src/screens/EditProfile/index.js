@@ -1,11 +1,9 @@
 import { useState } from "react";
 import * as React from 'react';
 import {
-  Button,
   Modal,
   StyleSheet,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
   Image
