@@ -99,13 +99,12 @@ export default LogIn = () => {
                     <TouchableOpacity onPress={() => doLogIn(email, password)}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>
-                                Next
+                                Log In
                             </Text>
                         </View>
                     </TouchableOpacity>
 
-
-                    <View style={{ alignItems: 'center' }}>
+                    {/* <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity>
                             <Text style={styles.signUp}>
                                 Don't have an account?
@@ -114,7 +113,7 @@ export default LogIn = () => {
                                 </Text>
                             </Text>
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </View>
             </View>
         </ImageBackground >

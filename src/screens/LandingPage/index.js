@@ -20,6 +20,10 @@ import styles from './styles.js';
 export default Landing = () => {
     const nav = useNavigation();
 
+    const errorMessage = () => {
+        alert("Functionality is not supported yet")
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.centerDisplay}>
@@ -35,7 +39,7 @@ export default Landing = () => {
                     Share easy.
                 </Text>
                 <View style={styles.options}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={errorMessage}>
                         <View style={styles.box}>
                             <Image
                                 source={require('../../../assets/images/google.png')}
@@ -46,7 +50,7 @@ export default Landing = () => {
                             </Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={errorMessage}>
                         <View style={styles.box}>
                             <Image
                                 source={require('../../../assets/images/apple.png')}
