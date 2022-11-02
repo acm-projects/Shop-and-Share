@@ -8,6 +8,8 @@ import LogIn from './src/screens/LogIn/index';
 import SignUp from './src/screens/SignUp/index';
 import HomeNoListScreen from './src/screens/HomeNoList';
 import SetDietaryRestrictions from './src/screens/SetDietaryRestrictions';
+import NewList from './src/screens/NewList';
+import ViewList from './src/screens/ViewList';
 
 
 const Stack = createNativeStackNavigator();
@@ -40,6 +42,16 @@ const App = () => {
           options={{ headerShown: false }}
           name="Sign Up 2"
           component={SetDietaryRestrictions}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="New List"
+          component={NewList}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="View List"
+          component={ViewList}
         />
       </Stack.Navigator>
     </NavigationContainer>

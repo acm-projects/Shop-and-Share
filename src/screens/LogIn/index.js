@@ -18,10 +18,14 @@ import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
 import auth from '@react-native-firebase/auth'; // Authentication import
 import { useNavigation } from "@react-navigation/core";
+import { firebase } from '@react-native-firebase/firestore';
+import firestore from '@react-native-firebase/firestore';
 
 // user auth function
+const db = firestore().collection('Users');
 
 export default LogIn = () => {
+    const user = db.doc(firebase.auth().currentUser?.email);
     /*
     const [initializing, setInitializing] = useState(true);
     const [user, setUser] = useState();
@@ -50,7 +54,11 @@ export default LogIn = () => {
         try {
             let response = await auth().signInWithEmailAndPassword(email, password)
             if (response && response.user) {
-                nav.replace("Home")
+                //alert((await user.collection('Lists').count().get()).data().count)
+                if ((await user.collection('Lists').count().get()).data().count == 1)
+                    nav.push("Home")
+                else
+                    nav.push("View List")
             }
         } catch (e) {
             console.error(e.message)

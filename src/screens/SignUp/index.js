@@ -49,6 +49,7 @@ export default SignUp = () => {
                                 lastName: lastName,
                                 phone: phoneNumber,
                             })
+                            db.doc(userEmail).collection('Lists').add({});
                             nav.push("Sign Up 2")
                         })
                     if (response && response.user) {
