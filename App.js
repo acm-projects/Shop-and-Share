@@ -10,7 +10,7 @@ import HomeNoListScreen from './src/screens/HomeNoList';
 import SetDietaryRestrictions from './src/screens/SetDietaryRestrictions';
 import NewList from './src/screens/NewList';
 import ViewList from './src/screens/ViewList';
-
+import EditList from './src/screens/EditList';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +52,11 @@ const App = () => {
           options={{ headerShown: false }}
           name="View List"
           component={ViewList}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Edit List"
+          component={EditList}
         />
       </Stack.Navigator>
     </NavigationContainer>
