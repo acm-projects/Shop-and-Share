@@ -15,6 +15,7 @@ import {
     View,
     Image,
     ScrollView,
+    ImageBackground
 } from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
@@ -33,6 +34,8 @@ const NewListScreen = () => {
   const [isPinned, setPinned] = useState(false);
   return (
     <View>
+      <ImageBackground source={require('../../../assets/images/Background.jpg')}
+        style={styles.ImageBackground}>
       <Modal
         animationType="slide"
         transparent={true}
@@ -170,6 +173,7 @@ const NewListScreen = () => {
           </View>
         </View>
       </Modal>
+      </ImageBackground>
     </View>
   );
 };
