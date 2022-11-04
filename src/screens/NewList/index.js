@@ -74,10 +74,11 @@ const NewListScreen = () => {
 
             <ScrollView style={styles.scrollView} nestedScrollEnabled={true}>
 
-              <TextInput style={{ width: 300 }}
+              <TextInput
+                // style={{ width: 300 }}
                 style={styles.NewListHeader}
                 placeholder="New List"
-                placeholderTextColor={colors.pureBlack}
+                placeholderTextColor={colors.grey}
                 multiline={true}
                 value={listName}
                 onChangeText={setListName}
@@ -149,7 +150,7 @@ const NewListScreen = () => {
 
               {/* add item component; onPress of add item icon (plus sign button), 
                 call the component again*/}
-              <AddItems />
+              <AddItems onPress={console.log('pressed')} />
 
 
               <Text style={styles.ListDetailsHeader}>
