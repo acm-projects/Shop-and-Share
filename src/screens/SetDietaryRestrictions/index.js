@@ -12,9 +12,9 @@ import {
 
 import firestore from '@react-native-firebase/firestore';
 import { useNavigation } from "@react-navigation/core";
+import { firebase } from '@react-native-firebase/auth';
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
-import { firebase } from '@react-native-firebase/auth';
 
 const db = firestore().collection('Users');
 
@@ -60,9 +60,10 @@ const SetDietaryRestrictions = () => {
         if (addNew != '')
             output.push(addNew)
 
+
         curUser.update('dietaryRestrictions', output);
 
-        nav.replace('Home');
+        nav.replace('Home No List');
     }
 
     return (

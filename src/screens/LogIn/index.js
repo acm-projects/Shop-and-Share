@@ -56,9 +56,9 @@ export default LogIn = () => {
             if (response && response.user) {
                 //alert((await user.collection('Lists').count().get()).data().count)
                 if ((await user.collection('Lists').count().get()).data().count == 1)
-                    nav.push("Home")
+                    nav.push("Home No List")
                 else
-                    nav.push("View List")
+                    nav.navigate('Menu Bar')
             }
         } catch (e) {
             console.error(e.message)
