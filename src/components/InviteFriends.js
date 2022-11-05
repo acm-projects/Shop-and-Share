@@ -3,60 +3,62 @@ import SearchBar from "react-native-dynamic-search-bar";
 import Clipboard from '@react-native-clipboard/clipboard';
 import { useState } from 'react';
 import colors from '../../assets/colors/colors';
+import { firebase } from '@react-native-firebase/firestore';
 
-import { 
-  StyleSheet, 
-  Text, 
-  View, 
-  SafeAreaView,
-  TouchableOpacity,
-  Image
-}  from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    SafeAreaView,
+    TouchableOpacity,
+    Image
+} from "react-native";
 
 const InviteFriends = () => {
+    const user = firebase.auth().currentUser?.email.substring(0, firebase.auth().currentUser?.email.length - 4);
     const [copiedText, setCopiedText] = useState('');
 
     // set this string to the user's profile link
     const copyToClipboard = () => {
-        Clipboard.setString('shop&sha.re/username');
+        Clipboard.setString('shop&sha.re/'.concat(user));
     };
-    
+
     const fetchCopiedText = async () => {
-    const text = await Clipboard.getString();
-    setCopiedText(text);
+        const text = await Clipboard.getString();
+        setCopiedText(text);
     };
-    
+
     return (
-      <>
-        <SafeAreaView style={{flex: 1}}>
-      <View>
-        <TouchableOpacity onPress={copyToClipboard} style={styles.ButtonContainer}>
-            <View style={styles.AlignWithClipboard}>
-                <View style={styles.AlignItems}>
-                    <Image source={require('../../assets/images/Temporary_Profile_Photo.jpg')}
-                        style={styles.UserProfilePhoto}/>
+        <>
+            <SafeAreaView style={{ flex: 1 }}>
                 <View>
-                    <Text style={styles.ButtonHeaderText}>
-                        Invite your friends to Shop&Share!
-                    </Text>
-                    <Text style={styles.ButtonBodyText}>
-                        shop&sha.re/username
-                    </Text>
+                    <TouchableOpacity onPress={copyToClipboard} style={styles.ButtonContainer}>
+                        <View style={styles.AlignWithClipboard}>
+                            <View style={styles.AlignItems}>
+                                <Image source={require('../../assets/images/Temporary_Profile_Photo.jpg')}
+                                    style={styles.UserProfilePhoto} />
+                                <View>
+                                    <Text style={styles.ButtonHeaderText}>
+                                        Invite your friends to Shop&Share!
+                                    </Text>
+                                    <Text style={styles.ButtonBodyText}>
+                                        {'shop&sha.re/'.concat(user)}
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <Image source={require('../../assets/images/Copy_Clipboard.png')}
+                                style={styles.ClipboardIcon} />
+
+                        </View>
+                    </TouchableOpacity>
                 </View>
-            </View>
-
-            <Image source={require('../../assets/images/Copy_Clipboard.png')}
-                    style={styles.ClipboardIcon}/>
-
-            </View>
-        </TouchableOpacity>
-        </View>
-    </SafeAreaView>
-      </>
+            </SafeAreaView>
+        </>
     )
-  }
+}
 
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     ButtonContainer: {
         backgroundColor: colors.pureWhite,
         height: 70,
@@ -97,6 +99,6 @@ const InviteFriends = () => {
         marginTop: 16,
         marginRight: 12
     }
-  });
+});
 
-  export default InviteFriends;
+export default InviteFriends;
