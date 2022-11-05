@@ -10,13 +10,14 @@ import { firebase } from '@react-native-firebase/firestore';
 import firestore from '@react-native-firebase/firestore';
 
 import {
-  Modal,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Image,
-  ScrollView,
+    Modal, 
+    StyleSheet, 
+    Text, 
+    TouchableOpacity, 
+    View,
+    Image,
+    ScrollView,
+    ImageBackground
 } from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
@@ -53,6 +54,8 @@ const NewListScreen = () => {
 
   return (
     <View>
+      <ImageBackground source={require('../../../assets/images/Background.jpg')}
+        style={styles.ImageBackground}>
       <Modal
         animationType="slide"
         transparent={true}
@@ -195,6 +198,7 @@ const NewListScreen = () => {
           </View>
         </View>
       </Modal>
+      </ImageBackground>
     </View>
   );
 };
