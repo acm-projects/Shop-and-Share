@@ -10,14 +10,14 @@ import { firebase } from '@react-native-firebase/firestore';
 import firestore from '@react-native-firebase/firestore';
 
 import {
-    Modal, 
-    StyleSheet, 
-    Text, 
-    TouchableOpacity, 
-    View,
-    Image,
-    ScrollView,
-    ImageBackground
+  Modal,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  ScrollView,
+  ImageBackground
 } from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
@@ -48,7 +48,6 @@ const NewListScreen = () => {
     });
 
     nav.pop();
-    nav.replace('View List');
 
   }
 
@@ -56,148 +55,148 @@ const NewListScreen = () => {
     <View>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
         style={styles.ImageBackground}>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View style={styles.Center}>
-          <View style={styles.ModalView}>
-            <View style={styles.NewListContainer}>
-            </View>
-            <TouchableOpacity
-              onPress={() => nav.pop()}>
-              <Image style={styles.CancelButton}
-                source={require('../../../assets/images/X_Button.png')}>
-              </Image>
-            </TouchableOpacity>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <View style={styles.Center}>
+            <View style={styles.ModalView}>
+              <View style={styles.NewListContainer}>
+              </View>
+              <TouchableOpacity
+                onPress={() => nav.pop()}>
+                <Image style={styles.CancelButton}
+                  source={require('../../../assets/images/X_Button.png')}>
+                </Image>
+              </TouchableOpacity>
 
-            <ScrollView style={styles.scrollView} nestedScrollEnabled={true}>
+              <ScrollView style={styles.scrollView} nestedScrollEnabled={true}>
 
-              <TextInput
-                // style={{ width: 300 }}
-                style={styles.NewListHeader}
-                placeholder="New List"
-                placeholderTextColor={colors.grey}
-                multiline={true}
-                value={listName}
-                onChangeText={setListName}
-              />
+                <TextInput
+                  // style={{ width: 300 }}
+                  style={styles.NewListHeader}
+                  placeholder="New List"
+                  placeholderTextColor={colors.grey}
+                  multiline={true}
+                  value={listName}
+                  onChangeText={setListName}
+                />
 
-              <View style={styles.DividerThick} />
+                <View style={styles.DividerThick} />
 
-              <Text style={styles.ListDetailsHeader}>
-                Deadline
-              </Text>
+                <Text style={styles.ListDetailsHeader}>
+                  Deadline
+                </Text>
 
-              <TouchableOpacity onPress={() => setOpen(true)}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={styles.ListDetails}>
-                    {date ? date.toLocaleDateString() : 'No date selected'}
-                  </Text>
-                  <View style={styles.AlignIcons}>
-                    <Image source={require('../../../assets/images/Calendar_Icon.png')} />
+                <TouchableOpacity onPress={() => setOpen(true)}>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Text style={styles.ListDetails}>
+                      {date ? date.toLocaleDateString() : 'No date selected'}
+                    </Text>
+                    <View style={styles.AlignIcons}>
+                      <Image source={require('../../../assets/images/Calendar_Icon.png')} />
+                    </View>
+                  </View>
+                </TouchableOpacity>
+
+                <DatePicker
+                  modal
+                  mode="date"
+                  open={open}
+                  date={date}
+                  onConfirm={(date) => {
+                    setOpen(false)
+                    setDate(date)
+                  }}
+                  onCancel={() => {
+                    setOpen(false)
+                  }}
+                />
+
+                <View style={styles.DividerThin} />
+
+                <Text style={styles.ListDetailsHeader}>
+                  Add Friends
+                </Text>
+
+                <View style={{ color: "white" }}>
+                  <AddFriends />
+                </View>
+
+                <Text style={styles.ListDetailsHeader}>
+                  All Dietary Preferences
+                </Text>
+                {/* add this dietary preference section based on the friends selected
+                  in the add friends section. */}
+                <View>
+                  <View style={styles.AlignDietaryPreferences}>
+                    {/* variable for friend's dietary preference */}
+                    <Text style={styles.DietaryPreference}>
+                      Veganism
+                    </Text>
+                    {/* variable for corresponding friend's name */}
+                    <Text style={styles.FriendName}>
+                      James Smith
+                    </Text>
+                  </View>
+                  <View style={styles.DividerThin} />
+                </View>
+
+                <Text style={styles.ListDetailsHeader}>
+                  Add Items
+                </Text>
+
+                {/* add item component; onPress of add item icon (plus sign button), 
+                call the component again*/}
+                <AddItems onPress={console.log('pressed')} />
+
+
+                <Text style={styles.ListDetailsHeader}>
+                  Notes
+                </Text>
+
+                <TextInput
+                  style={styles.ExtraNotes}
+                  placeholder="Any extra notes?"
+                  multiline={true}
+                  value={notes}
+                  onChangeText={setNotes}
+                />
+
+                <View style={styles.DividerThin} />
+
+                <View style={styles.PinContainer}>
+                  <View style={styles.PinCheckBoxContainer}>
+                    {/* when checkbox clicked, pin list */}
+                    <CheckBox
+                      value={isPinned}
+                      onValueChange={setPinned}
+                      tintColors={{ true: colors.primaryPurple, false: colors.primaryPurple }}
+                      style={styles.Checkboxes}
+                    />
+                    <Text style={styles.PinListText}>
+                      Pin this list?
+                    </Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </ScrollView>
 
-              <DatePicker
-                modal
-                mode="date"
-                open={open}
-                date={date}
-                onConfirm={(date) => {
-                  setOpen(false)
-                  setDate(date)
-                }}
-                onCancel={() => {
-                  setOpen(false)
-                }}
-              />
-
-              <View style={styles.DividerThin} />
-
-              <Text style={styles.ListDetailsHeader}>
-                Add Friends
-              </Text>
-
-              <View style={{ color: "white" }}>
-                <AddFriends />
-              </View>
-
-              <Text style={styles.ListDetailsHeader}>
-                All Dietary Preferences
-              </Text>
-              {/* add this dietary preference section based on the friends selected
-                  in the add friends section. */}
-              <View>
-                <View style={styles.AlignDietaryPreferences}>
-                  {/* variable for friend's dietary preference */}
-                  <Text style={styles.DietaryPreference}>
-                    Veganism
-                  </Text>
-                  {/* variable for corresponding friend's name */}
-                  <Text style={styles.FriendName}>
-                    James Smith
-                  </Text>
-                </View>
-                <View style={styles.DividerThin} />
-              </View>
-
-              <Text style={styles.ListDetailsHeader}>
-                Add Items
-              </Text>
-
-              {/* add item component; onPress of add item icon (plus sign button), 
-                call the component again*/}
-              <AddItems onPress={console.log('pressed')} />
-
-
-              <Text style={styles.ListDetailsHeader}>
-                Notes
-              </Text>
-
-              <TextInput
-                style={styles.ExtraNotes}
-                placeholder="Any extra notes?"
-                multiline={true}
-                value={notes}
-                onChangeText={setNotes}
-              />
-
-              <View style={styles.DividerThin} />
-
-              <View style={styles.PinContainer}>
-                <View style={styles.PinCheckBoxContainer}>
-                  {/* when checkbox clicked, pin list */}
-                  <CheckBox
-                    value={isPinned}
-                    onValueChange={setPinned}
-                    tintColors={{ true: colors.primaryPurple, false: colors.primaryPurple }}
-                    style={styles.Checkboxes}
-                  />
-                  <Text style={styles.PinListText}>
-                    Pin this list?
-                  </Text>
-                </View>
-              </View>
-            </ScrollView>
-
-            <View style={styles.buttonContainer}>
-              {/*onpress add list to the home page
+              <View style={styles.buttonContainer}>
+                {/*onpress add list to the home page
                 with all the details */}
-              <TouchableOpacity onPress={() => createList()}>
-                <Text style={styles.buttonText}>
-                  Create List
-                </Text>
-              </TouchableOpacity>
+                <TouchableOpacity onPress={() => createList()}>
+                  <Text style={styles.buttonText}>
+                    Create List
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
-      </Modal>
+        </Modal>
       </ImageBackground>
     </View>
   );

@@ -20,7 +20,6 @@ LogBox.ignoreLogs([
   "Modal with 'fullScreen'"
 ])
 
-
 const AddFriends = () => {
   const user = firebase.auth().currentUser?.email;
 
@@ -35,7 +34,6 @@ const AddFriends = () => {
         const add = documentSnapshot.data()['friends']
 
         for (let i = 0; i < add.length; i++) {
-          console.log(add[i])
           setItems(arr => [...arr, {
             label: add[i],
             value: add[i],

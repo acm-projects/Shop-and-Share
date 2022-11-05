@@ -12,6 +12,7 @@ import {
   Image,
 } from "react-native";
 import ViewList from '../screens/ViewList';
+import MyFriendsScreen from '../screens/MyFriends';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,7 +44,7 @@ const MenuBar = () => {
 
       <Tab.Screen name="Home" component={ViewList} options={{ headerShown: false }} />
       <Tab.Screen name="Search" component={SearchFriendsScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="Friends" component={NoFriendsScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="Friends" component={MyFriendsScreen} options={{ headerShown: false }} />
       <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
 
     </Tab.Navigator>
