@@ -16,18 +16,17 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width:"100%",
         length: "100%",
-
     },
     sectionTitle: {
       fontSize: 40,
       color: colors.light,
       fontFamily: 'Montserrat-Bold', 
       alignItems: 'center',
-      padding: 25,
-      marginTop: 60,
+      paddingLeft: 25,
+      paddingBottom: 13,
+      marginTop: 40,
     },
     centerDisplay: {
-        paddingBottom: 100,
         paddingHorizontal: 13,
         alignItems: 'center',
         flexDirection: 'column',
@@ -91,11 +90,10 @@ const styles = StyleSheet.create({
     addListButton: {
         width: 200,
         height: 50,
-        backgroundColor: colors.lightDivider, 
+        backgroundColor: colors.pureWhite, 
         borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
-
     },
     addList: {
         fontSize: 20,

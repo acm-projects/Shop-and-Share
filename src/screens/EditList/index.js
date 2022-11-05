@@ -15,7 +15,7 @@ import {
     View,
     Image,
     ScrollView,
-    ImageBackground
+    ImageBackground,
 } from "react-native";
 
 import colors from '../../../assets/colors/colors.js';

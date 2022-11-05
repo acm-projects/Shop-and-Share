@@ -10,7 +10,8 @@ import {
   TouchableOpacity, 
   ImageBackground,
   Image,
-  Touchable
+  Touchable,
+  ScrollView
 }  from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
@@ -26,7 +27,12 @@ export default ViewList = () => {
             </Text>
         <View style={styles.containter}>
             <View style={styles.centerDisplay}>
+                <View style={{marginBottom: -10}}>
                 <SearchableBar/>
+                </View>
+
+                <ScrollView style = {{height: 500, marginBottom: 20}}>
+                    
                 <TouchableOpacity>
                 <View style={styles.box2}>
                     <Image 
@@ -41,6 +47,7 @@ export default ViewList = () => {
                     </Text>
                 </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity>
                 <View style={styles.box2}>
                     <Text style={styles.sectionList}>
@@ -51,6 +58,7 @@ export default ViewList = () => {
                     </Text>
                 </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity>
                 <View style={styles.box2}>
                     <Text style={styles.sectionList}>
@@ -61,6 +69,31 @@ export default ViewList = () => {
                     </Text>
                 </View>
                 </TouchableOpacity>
+
+                <TouchableOpacity>
+                <View style={styles.box2}>
+                    <Text style={styles.sectionList}>
+                        List Name
+                    </Text>
+                    <Text style={styles.sectionList2}>
+                        Oct 07 2022
+                    </Text>
+                </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                <View style={styles.box2}>
+                    <Text style={styles.sectionList}>
+                        List Name
+                    </Text>
+                    <Text style={styles.sectionList2}>
+                        Oct 07 2022
+                    </Text>
+                </View>
+                </TouchableOpacity>
+
+                </ScrollView>
+
             </View>
             <TouchableOpacity>
                     <View style={styles.addListButton}>
