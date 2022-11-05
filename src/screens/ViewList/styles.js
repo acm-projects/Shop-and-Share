@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import {StyleSheet}  from "react-native";
+import { StyleSheet } from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
 
@@ -14,17 +14,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        width:"100%",
+        width: "100%",
         length: "100%",
 
     },
     sectionTitle: {
-      fontSize: 40,
-      color: colors.light,
-      fontFamily: 'Montserrat-Bold', 
-      alignItems: 'center',
-      padding: 25,
-      marginTop: 60,
+        fontSize: 40,
+        color: colors.light,
+        fontFamily: 'Montserrat-Bold',
+        alignItems: 'center',
+        padding: 25,
+        marginTop: 60,
     },
     centerDisplay: {
         paddingBottom: 100,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        width:"100%",
+        width: "100%",
         length: "100%",
     },
     options: {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     box: {
         width: 330,
         height: 30,
-        backgroundColor:colors.lightDivider, 
+        backgroundColor: colors.lightDivider,
         borderRadius: 20,
         color: colors.white,
         alignItems: 'center',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     sectionBottom: {
         fontSize: 12,
         color: colors.grey,
-        fontFamily: 'Montserrat-Regular', 
+        fontFamily: 'Montserrat-Regular',
     },
     sectionList: {
         fontSize: 25,
@@ -84,14 +84,18 @@ const styles = StyleSheet.create({
         width: 25,
         legnth: 25,
         float: 'right',
-        position: 'absolute', 
+        position: 'absolute',
         right: 0,
         margin: 15,
+    },
+    noPin: {
+        width: 0,
+        height: 0
     },
     addListButton: {
         width: 200,
         height: 50,
-        backgroundColor: colors.lightDivider, 
+        backgroundColor: colors.lightDivider,
         borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
@@ -102,7 +106,7 @@ const styles = StyleSheet.create({
         color: colors.lpurp,
         fontFamily: 'Montserrat-SemiBold',
     }
-  });
+});
 
-  export default styles;
+export default styles;
 
