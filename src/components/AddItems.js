@@ -4,8 +4,8 @@ import { Collapse, CollapseHeader, CollapseBody } from "accordion-collapse-react
 import CheckBox from '@react-native-community/checkbox';
 import DatePicker from 'react-native-date-picker';
 
-import { 
-  ImageBackground, 
+import {
+  ImageBackground,
   View,
   Text,
   Image,
@@ -30,130 +30,130 @@ const AddItems = () => {
   const [expirationOpen, setExpirationOpen] = useState(false)
   return (
     <View>
-      <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
-        <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
           <CheckBox
-              value={isSelected}
-              onValueChange={setSelection}
-              tintColors={{ true: colors.primaryPurple}}
-              style={styles.Checkboxes}
+            value={isSelected}
+            onValueChange={setSelection}
+            tintColors={{ true: colors.primaryPurple }}
+            style={styles.Checkboxes}
           />
           <TextInput
-          style={styles.ItemName}
-          placeholder="Item Name"
+            style={styles.ItemName}
+            placeholder="Item Name"
           />
         </View>
-          <Collapse onToggle={handleImageChange}>
-            <CollapseHeader>
-                  <View style={styles.AlignIcons}>
-                  <Image 
-                    source={imageAsset}/>
-                  </View>
-            </CollapseHeader>   
-            <CollapseBody styles={styles.AddItemContainer}>
-              <View style={styles.DetailsDivider}>
-              </View>
+        <Collapse onToggle={handleImageChange}>
+          <CollapseHeader>
+            <View style={styles.AlignIcons}>
+              <Image
+                source={imageAsset} />
+            </View>
+          </CollapseHeader>
+          <CollapseBody styles={styles.AddItemContainer}>
+            <View style={styles.DetailsDivider}>
+            </View>
 
-              <View style={styles.AlignDetailIcons}>
-                <Image source={require('../../assets/images/Store_Icon.png')}
-                      style={styles.DetailIcons}/>
-                <Text
+            <View style={styles.AlignDetailIcons}>
+              <Image source={require('../../assets/images/Store_Icon.png')}
+                style={styles.DetailIcons} />
+              <Text
                 style={styles.DetailTextStyle}>
-                  Store 
-                </Text>
+                Store
+              </Text>
 
-                <TextInput style={styles.DetailTextInput}
-                placeholder='Store'> 
-                </TextInput>
-              </View>
+              <TextInput style={styles.DetailTextInput}
+                placeholder='Store'>
+              </TextInput>
+            </View>
 
-              <View style={styles.DetailsDivider}>
-              </View>
+            <View style={styles.DetailsDivider}>
+            </View>
 
-              <View style={styles.AlignDetailIcons}>
-                <Image source={require('../../assets/images/Brand_Icon.png')}
-                      style={styles.DetailIcons}/>
-                <Text
+            <View style={styles.AlignDetailIcons}>
+              <Image source={require('../../assets/images/Brand_Icon.png')}
+                style={styles.DetailIcons} />
+              <Text
                 style={styles.DetailTextStyle}>
-                  Brand 
-                </Text>
+                Brand
+              </Text>
 
-                <TextInput style={styles.DetailTextInput}
-                placeholder='Brand'> 
-                </TextInput>
-              </View>
+              <TextInput style={styles.DetailTextInput}
+                placeholder='Brand'>
+              </TextInput>
+            </View>
 
-              <View style={styles.DetailsDivider}>
-              </View>
+            <View style={styles.DetailsDivider}>
+            </View>
 
-              <View style={styles.AlignDetailIcons}>
-                <Image source={require('../../assets/images/Price_Icon.png')}
-                      style={styles.DetailIcons}/>
-                <Text
+            <View style={styles.AlignDetailIcons}>
+              <Image source={require('../../assets/images/Price_Icon.png')}
+                style={styles.DetailIcons} />
+              <Text
                 style={styles.DetailTextStyle}>
-                  Price 
-                </Text>
+                Price
+              </Text>
 
-                <TextInput style={styles.DetailTextInput}
-                placeholder='Price'> 
-                </TextInput>
-              </View>
+              <TextInput style={styles.DetailTextInput}
+                placeholder='Price'>
+              </TextInput>
+            </View>
 
-              <View style={styles.DetailsDivider}>
-              </View>
+            <View style={styles.DetailsDivider}>
+            </View>
 
-              <View style={styles.AlignDetailIcons}>
-                <Image source={require('../../assets/images/Quantity_Icon.png')}
-                      style={styles.DetailIcons}/>
-                <Text
+            <View style={styles.AlignDetailIcons}>
+              <Image source={require('../../assets/images/Quantity_Icon.png')}
+                style={styles.DetailIcons} />
+              <Text
                 style={styles.DetailTextStyle}>
-                  Quantity
-                </Text>
-                <TextInput style={styles.DetailTextInput}
-                placeholder='Quantity'> 
-                </TextInput>
-              </View>
+                Quantity
+              </Text>
+              <TextInput style={styles.DetailTextInput}
+                placeholder='Quantity'>
+              </TextInput>
+            </View>
 
-              <View style={styles.DetailsDivider}>
-              </View>
+            <View style={styles.DetailsDivider}>
+            </View>
 
-              <View style={styles.AlignDetailIcons}>
+            <View style={styles.AlignDetailIcons}>
 
-                <TouchableOpacity onPress={() => setExpirationOpen(true)}>
-                  <Image source={require('../../assets/images/Expiration_Icon.png')}
-                        style={styles.DetailIcons}/>
-                  <Text
+              <TouchableOpacity onPress={() => setExpirationOpen(true)}>
+                <Image source={require('../../assets/images/Expiration_Icon.png')}
+                  style={styles.DetailIcons} />
+                <Text
                   style={styles.DetailTextStyle}>
-                    Expires By
-                  </Text>
-                  <Text style={styles.ExpirationDateText}>
+                  Expires By
+                </Text>
+                <Text style={styles.ExpirationDateText}>
                   {expirationDate ? expirationDate.toLocaleDateString() : 'No date selected'}
-                  </Text>
-                </TouchableOpacity>
+                </Text>
+              </TouchableOpacity>
 
-                <DatePicker
-                  modal
-                  mode="date"
-                  open={expirationOpen}
-                  date={expirationDate}
-                  onConfirm={(expirationDate) => {
-                    setExpirationOpen(false)
-                    setExpirationDate(expirationDate)
-                  }}
-                  onCancel={() => {
-                    setExpirationOpen(false)
-                  }}
-                />
+              <DatePicker
+                modal
+                mode="date"
+                open={expirationOpen}
+                date={expirationDate}
+                onConfirm={(expirationDate) => {
+                  setExpirationOpen(false)
+                  setExpirationDate(expirationDate)
+                }}
+                onCancel={() => {
+                  setExpirationOpen(false)
+                }}
+              />
 
-              </View>
-            </CollapseBody>
+            </View>
+          </CollapseBody>
         </Collapse>
-        </View>
+      </View>
 
-        <View style={styles.DividerThin}>
-        </View>
+      <View style={styles.DividerThin}>
+      </View>
     </View>
-);
+  );
 }
 
 
@@ -217,9 +217,9 @@ const styles = StyleSheet.create({
     marginBottom: -5
   },
   AlignIcons: {
-    flexDirection: 'row', 
-    flexWrap: 'wrap', 
-    justifyContent:'flex-end', 
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end',
     overflow: 'visible',
     marginRight: 5
   },
