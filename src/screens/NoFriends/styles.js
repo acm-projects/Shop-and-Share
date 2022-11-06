@@ -142,3 +142,5 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   }
 });
+
+export default styles;

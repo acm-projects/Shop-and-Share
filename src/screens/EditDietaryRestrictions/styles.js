@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
 
     BoldText: {
-        fontFamily: 'Montserrat-SemiBold',
+        fontFamily: 'Montserrat-Medium',
         color: colors.pureBlack,
         position: 'absolute',
             left: 16,
@@ -75,9 +75,6 @@ const styles = StyleSheet.create({
             top: 160,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 4,
-        borderWidth: 4,
-        borderColor: "#5747B9",
     },
 
     fishContainer: {
@@ -88,9 +85,6 @@ const styles = StyleSheet.create({
             top: 160,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
     },
 
     vegContainer: {
@@ -101,9 +95,6 @@ const styles = StyleSheet.create({
             top: 275,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 4,
-        borderWidth: 4,
-        borderColor: "#5747B9",
     },
 
     veganContainer: {
@@ -114,9 +105,6 @@ const styles = StyleSheet.create({
             top: 275,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
     },
 
     lactoseContainer: {
@@ -127,9 +115,6 @@ const styles = StyleSheet.create({
             top: 390,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
     },
 
     glutenContainer: {
@@ -140,9 +125,6 @@ const styles = StyleSheet.create({
             top: 390,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
     },
 
     ketoContainer: {
@@ -153,9 +135,6 @@ const styles = StyleSheet.create({
             top: 505,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
     },
 
     addContainer: {
@@ -167,31 +146,17 @@ const styles = StyleSheet.create({
         backgroundColor: colors.pureWhite,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 4,
-        borderWidth: 4,
-        borderColor: "#5747B9",
     },
 
-    saveContainer: {
-        height: 42,
-        width: 315,
-        position: 'absolute',
-            right: 40,
-            top: 640,
-            //top: 510,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 10,
-        elevation: 5,
-        borderWidth: 3,
-        borderColor: "#5747B9",
-    },
-
-    saveButtonText: {
-        color: colors.black,
+    AddText: {
         fontFamily: 'Montserrat-Medium',
-        textAlign: 'center',
-        fontSize: 16,
-        paddingTop: 9,
+        color: colors.pureBlack,
+        position: 'absolute',
+            left: 10,
+            top: 50,
+        fontSize: 15,
+        width: 100,
+        paddingBottom: 10,
     },
 });
 

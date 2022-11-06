@@ -9,6 +9,7 @@ import {
   TouchableOpacity, 
   Image,
   ImageBackground,
+  TextInput
 }  from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
@@ -44,94 +45,82 @@ const SetDietaryRestrictions = () => {
                     My Dietary          Restrictions
                     </Text>
 
-                    <View style={styles.nutContainer}>
-                  <TouchableOpacity
+                    <TouchableOpacity
                     onPress={() => {}}
                     >
+                    <View style={styles.nutContainer}>
                       <Text style={styles.BoldText}>
                           Nut Allergy
                       </Text>  
+                  </View>
                   </TouchableOpacity>
-                </View>
 
-                <View style={styles.fishContainer}>
                   <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.fishContainer}>
                       <Text style={styles.Text}>
                           Fish Allergy
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.vegContainer}>
-                  <TouchableOpacity
+
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.vegContainer}>
                       <Text style={styles.BoldText}>
                           Vegetarian
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.veganContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.veganContainer}>
                       <Text style={styles.Text}>
                           Vegan
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.lactoseContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.lactoseContainer}>
                       <Text style={styles.longText}>
                           Lactose        Intolerancy
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.glutenContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.glutenContainer}>
                       <Text style={styles.longText}>
                           Gluten         Intolerancy
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.ketoContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.ketoContainer}>
                       <Text style={styles.Text}>
                           Keto
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
+
 
                 <View style={styles.addContainer}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    >
-                      <Text style={styles.BoldText}>
-                          + Add New
-                      </Text>  
-                  </TouchableOpacity>
-                </View>
-
-                <View style={styles.saveContainer}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    >
-                      <Text style={styles.saveButtonText}>
-                          Save
-                      </Text>  
-                  </TouchableOpacity>
+                      <TextInput style={styles.AddText}
+                          placeholder="+ Add New">
+                      </TextInput>  
                 </View>
 
           </SafeAreaView>

@@ -69,22 +69,13 @@ const ProfileScreen = () => {
               source={require('../../../assets/images/Temporary_Profile_Photo.jpg')} />
 
             {/* add functionality to the number of lists and groups later*/}
-            <View style={styles.NumbersContainer}>
+            <View style = {{alignItems: "center", top: 130}}>
               <Text style={styles.ListsNumber}>
                 {lists}
               </Text>
-              {/* <Text style={styles.GroupsNumber}>
-                15
-              </Text> */}
-            </View>
-
-            <View>
               <Text style={styles.ListsText}>
                 Lists
               </Text>
-              {/* <Text style={styles.GroupsText}>
-                Groups
-              </Text> */}
             </View>
 
             {/* onPress -> open edit profile component */}
