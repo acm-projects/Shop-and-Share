@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     },
     scrollView: {
       marginHorizontal: 34,
-      marginTop: 25
+      marginTop: 25,
     },
     ListDetailsHeader: {
       fontSize: 17,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: "flex-start",
       justifyContent: 'flex-start',
-      marginTop: 20,
+      marginTop: 20
     },
     PinCheckBoxContainer: {
       flexDirection: "row",
@@ -109,6 +109,23 @@ const styles = StyleSheet.create({
       fontSize: 15,
       color: colors.primaryPurple,
       marginLeft: 6,
+    },
+    buttonContainer: {
+      height: 45,
+      backgroundColor: colors.primaryPurple,
+      justifyContent: 'center',
+      borderRadius: 50,
+      elevation:4,
+      width: 289,
+      marginHorizontal: 50,
+      position: "absolute",
+      top: 640
+    },
+    buttonText: {
+      color: colors.pureWhite,
+      fontFamily: 'Montserrat-Medium',
+      textAlign: 'center',
+      fontSize: 20,
     },
     CancelButton: {
         alignSelf: "flex-end",
@@ -122,6 +139,11 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       justifyContent: "space-between"
     },
+    ItemIcon: {
+      position: "absolute",
+      marginTop: 18,
+      marginLeft: 300
+    },
     DietaryPreference: {
       color: colors.primaryPurple,
       fontSize: 14,
@@ -134,23 +156,7 @@ const styles = StyleSheet.create({
       fontFamily: "Montserrat-Regular",
       marginRight: 5,
       marginBottom: -3,
-    },
-    buttonContainer: {
-      height: 45,
-      backgroundColor: colors.primaryPurple,
-      justifyContent: 'center',
-      borderRadius: 50,
-      elevation:4,
-      width: 289,
-      marginHorizontal: 50,
-      marginBottom: 15
-    },
-    buttonText: {
-      color: colors.pureWhite,
-      fontFamily: 'Montserrat-Medium',
-      textAlign: 'center',
-      fontSize: 20,
-    },
+    }
 });
 
 export default styles;

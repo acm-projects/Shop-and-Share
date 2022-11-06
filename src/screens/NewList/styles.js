@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     },
     scrollView: {
       marginHorizontal: 34,
-      marginTop: 25
+      marginTop: 25,
+      marginBottom: 60,
     },
     ListDetailsHeader: {
       fontSize: 17,
@@ -111,6 +112,8 @@ const styles = StyleSheet.create({
       marginLeft: 6,
     },
     buttonContainer: {
+      position: "absolute",
+      top: 630,
       height: 45,
       backgroundColor: colors.primaryPurple,
       justifyContent: 'center',
@@ -118,7 +121,6 @@ const styles = StyleSheet.create({
       elevation:4,
       width: 289,
       marginHorizontal: 50,
-      marginBottom: 15
     },
     buttonText: {
       color: colors.pureWhite,
