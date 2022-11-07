@@ -15,7 +15,7 @@ import {
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
 
-const SetDietaryRestrictions = () => {
+const EditDietaryRestrictions = () => {
     return (
       <>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
@@ -130,4 +130,4 @@ const SetDietaryRestrictions = () => {
     )
   }
 
-  export default SetDietaryRestrictions;
+  export default EditDietaryRestrictions;
