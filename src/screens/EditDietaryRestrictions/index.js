@@ -9,12 +9,14 @@ import {
   TouchableOpacity, 
   Image,
   ImageBackground,
+  TextInput,
+  ScrollView
 }  from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
 
-const SetDietaryRestrictions = () => {
+const EditDietaryRestrictions = () => {
     return (
       <>
       <ImageBackground source={require('../../../assets/images/Background.jpg')}
@@ -44,95 +46,124 @@ const SetDietaryRestrictions = () => {
                     My Dietary          Restrictions
                     </Text>
 
-                    <View style={styles.nutContainer}>
+                <ScrollView style={styles.scrollView}> 
+                <View style={styles.GridView}>
                   <TouchableOpacity
                     onPress={() => {}}
                     >
+                     <View style={styles.container}>
                       <Text style={styles.BoldText}>
                           Nut Allergy
                       </Text>  
+                     </View>
                   </TouchableOpacity>
-                </View>
 
-                <View style={styles.fishContainer}>
                   <TouchableOpacity
+                      onPress={() => {}}
+                      >
+                    <View style={styles.container}>
+                        <Text style={styles.Text}>
+                            Fish Allergy
+                        </Text>  
+                    </View>
+                  </TouchableOpacity>                  
+
+                <TouchableOpacity
                     onPress={() => {}}
                     >
-                      <Text style={styles.Text}>
-                          Fish Allergy
-                      </Text>  
-                  </TouchableOpacity>
-                </View>
-
-                <View style={styles.vegContainer}>
-                  <TouchableOpacity
-                    onPress={() => {}}
-                    >
+                <View style={styles.container}>
                       <Text style={styles.BoldText}>
                           Vegetarian
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.veganContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.container}>
                       <Text style={styles.Text}>
                           Vegan
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.lactoseContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.container}>
                       <Text style={styles.longText}>
                           Lactose        Intolerancy
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.glutenContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.container}>
                       <Text style={styles.longText}>
                           Gluten         Intolerancy
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.ketoContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
+                <View style={styles.container}>
                       <Text style={styles.Text}>
                           Keto
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
 
-                <View style={styles.addContainer}>
-                  <TouchableOpacity
+                <TouchableOpacity
                     onPress={() => {}}
                     >
-                      <Text style={styles.BoldText}>
-                          + Add New
+                <View style={styles.container}>
+                      <Text style={styles.Text}>
+                          Kosher
                       </Text>  
-                  </TouchableOpacity>
                 </View>
-
-                <View style={styles.saveContainer}>
-                  <TouchableOpacity
+                </TouchableOpacity>
+                <TouchableOpacity
                     onPress={() => {}}
                     >
-                      <Text style={styles.saveButtonText}>
-                          Save
+                <View style={styles.container}>
+                      <Text style={styles.Text}>
+                          Pescatarianism
                       </Text>  
-                  </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {}}
+                    >
+                <View style={styles.container}>
+                      <Text style={styles.Text}>
+                          Shellfish
+                      </Text>  
+                </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {}}
+                    >
+                <View style={styles.container}>
+                      <Text style={styles.Text}>
+                          Soy
+                      </Text>  
+                </View>
+                </TouchableOpacity>
+
+
+                <View style={styles.container}>
+                      <TextInput style={styles.AddText}
+                          placeholder="+ Add New">
+                      </TextInput>  
+                </View>
+
+                </View>
+                </ScrollView>
 
           </SafeAreaView>
         </View>
@@ -141,4 +172,4 @@ const SetDietaryRestrictions = () => {
     )
   }
 
-  export default SetDietaryRestrictions;
+  export default EditDietaryRestrictions;
