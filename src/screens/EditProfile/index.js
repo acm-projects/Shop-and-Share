@@ -6,7 +6,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Image
+  Image,
+  ImageBackground
 } from "react-native";
 
 import colors from "../../../assets/colors/colors.js";
@@ -45,6 +46,8 @@ const EditProfile = () => {
 
   return (
     <View>
+      <ImageBackground source={require('../../../assets/images/Background.jpg')}
+      style={styles.ImageBackground}>
       <Modal
         animationType="fade"
         transparent={true}
@@ -125,17 +128,6 @@ const EditProfile = () => {
             </View>
 
             <View style={styles.AlignHeaderAndInput}>
-              <Text style={styles.Header}>Email</Text>
-              <TextInput style={styles.Input}
-                placeholder="Email"
-                autoCapitalize='none'>
-              </TextInput>
-            </View>
-
-            <View style={styles.DividerThin}>
-            </View>
-
-            <View style={styles.AlignHeaderAndInput}>
               <Text style={styles.Header}>Phone Number</Text>
               <TextInput
                 style={styles.Input}
@@ -161,6 +153,7 @@ const EditProfile = () => {
           </View>
         </View>
       </Modal>
+      </ImageBackground>
     </View>
   );
 };
