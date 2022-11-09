@@ -18,10 +18,14 @@ import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
 import auth from '@react-native-firebase/auth'; // Authentication import
 import { useNavigation } from "@react-navigation/core";
+import { firebase } from '@react-native-firebase/firestore';
+import firestore from '@react-native-firebase/firestore';
 
 // user auth function
+const db = firestore().collection('Users');
 
 export default LogIn = () => {
+    const user = db.doc(firebase.auth().currentUser?.email);
     /*
     const [initializing, setInitializing] = useState(true);
     const [user, setUser] = useState();
@@ -50,7 +54,11 @@ export default LogIn = () => {
         try {
             let response = await auth().signInWithEmailAndPassword(email, password)
             if (response && response.user) {
-                nav.replace("Home")
+                //alert((await user.collection('Lists').count().get()).data().count)
+                if ((await user.collection('Lists').count().get()).data().count == 1)
+                    nav.push("Home No List")
+                else
+                    nav.navigate('Menu Bar')
             }
         } catch (e) {
             console.error(e.message)
@@ -99,12 +107,13 @@ export default LogIn = () => {
                     <TouchableOpacity onPress={() => doLogIn(email, password)}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>
-                                Next
+                                Log In
                             </Text>
                         </View>
                     </TouchableOpacity>
+                    
+                    {/* <View style={{ alignItems: 'center' }}>
 
-                    <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity>
                             <Text style={styles.signUp}>
                                 Don't have an account?
@@ -113,7 +122,7 @@ export default LogIn = () => {
                                 </Text>
                             </Text>
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </View>
             </View>
         </ImageBackground >

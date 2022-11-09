@@ -6,25 +6,48 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Image
+  Image,
+  ImageBackground
 } from "react-native";
 
 import colors from "../../../assets/colors/colors.js";
 import styles from "./styles.js";
 import { TextInput } from "react-native-gesture-handler";
 import firestore from '@react-native-firebase/firestore';
+import { firebase } from '@react-native-firebase/firestore';
+import { useNavigation } from "@react-navigation/native";
 
 const db = firestore().collection('Users');
 
 const EditProfile = () => {
+  const nav = useNavigation();
+  const user = db.doc(firebase.auth().currentUser?.email);
+
   const [modalVisible, setModalVisible] = useState(true);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleSubmit = () => {
+    if (firstName != '')
+      user.update({ firstName: firstName })
+    if (lastName != '')
+      user.update({ lastName: lastName })
+    if (number != '')
+      user.update({ phone: number })
 
+    nav.pop();
+  }
+
+  const handleCancel = () => {
+    setModalVisible(!modalVisible);
+    nav.pop();
   }
 
   return (
     <View>
+      <ImageBackground source={require('../../../assets/images/Background.jpg')}
+      style={styles.ImageBackground}>
       <Modal
         animationType="fade"
         transparent={true}
@@ -38,7 +61,7 @@ const EditProfile = () => {
 
             <View styles={styles.Options}>
               <TouchableOpacity
-                onPress={() => setModalVisible(!modalVisible)}>
+                onPress={handleCancel}>
                 <Text style={styles.CancelButton}>Cancel</Text>
               </TouchableOpacity>
 
@@ -50,7 +73,7 @@ const EditProfile = () => {
             </View>
 
             {/* onPress -> change profile photo*/}
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => alert('Functionality not supported yet')}>
               <Image
                 source={require('../../../assets/images/Temporary_Profile_Photo.jpg')}
                 style={styles.ProfilePhotoContainer}>
@@ -67,8 +90,12 @@ const EditProfile = () => {
 
             <View style={styles.AlignHeaderAndInput}>
               <Text style={styles.Header}>First Name</Text>
-              <TextInput style={styles.Input}
-                placeholder="First Name">
+              <TextInput
+                style={styles.Input}
+                placeholder="First Name"
+                value={firstName}
+                onChangeText={setFirstName}
+              >
               </TextInput>
             </View>
 
@@ -77,8 +104,12 @@ const EditProfile = () => {
 
             <View style={styles.AlignHeaderAndInput}>
               <Text style={styles.Header}>Last Name</Text>
-              <TextInput style={styles.Input}
-                placeholder="Last Name">
+              <TextInput
+                style={styles.Input}
+                placeholder="Last Name"
+                value={lastName}
+                onChangeText={setLastName}
+              >
               </TextInput>
             </View>
 
@@ -97,21 +128,14 @@ const EditProfile = () => {
             </View>
 
             <View style={styles.AlignHeaderAndInput}>
-              <Text style={styles.Header}>Email</Text>
-              <TextInput style={styles.Input}
-                placeholder="Email"
-                autoCapitalize='none'>
-              </TextInput>
-            </View>
-
-            <View style={styles.DividerThin}>
-            </View>
-
-            <View style={styles.AlignHeaderAndInput}>
               <Text style={styles.Header}>Phone Number</Text>
-              <TextInput style={styles.Input}
+              <TextInput
+                style={styles.Input}
                 placeholder="Phone Number"
-                keyboardType='numeric'>
+                keyboardType='numeric'
+                value={number}
+                onChangeText={setNumber}
+              >
               </TextInput>
             </View>
 
@@ -119,7 +143,7 @@ const EditProfile = () => {
             </View>
 
             {/* onPress -> go to ResetPassword page page navigation*/}
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => nav.push('Reset Password 1')}>
               <Text style={styles.ResetPass}>Reset Password</Text>
             </TouchableOpacity>
 
@@ -129,6 +153,7 @@ const EditProfile = () => {
           </View>
         </View>
       </Modal>
+      </ImageBackground>
     </View>
   );
 };

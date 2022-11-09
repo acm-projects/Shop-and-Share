@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: 'rgba(0, 0, 0, 0.5)'
     },
+    ImageBackground: {
+        width: "100%",
+        height: "100%"
+    },
     ModalView: {
         backgroundColor: "white",
         borderRadius: 20,

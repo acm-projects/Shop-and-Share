@@ -8,7 +8,8 @@ import {
     FlatList,
     ImageBackground,
     TextInput,
-    TouchableOpacity
+    TouchableOpacity,
+    Keyboard
 } from 'react-native';
 
 import styles from "./styles";
@@ -16,6 +17,7 @@ import auth from '@react-native-firebase/auth'; // Authentication import
 import firestore from '@react-native-firebase/firestore';
 import { useNavigation } from "@react-navigation/core";
 import KeyboardAvoidingView from "react-native/Libraries/Components/Keyboard/KeyboardAvoidingView";
+
 
 const db = firestore().collection('Users');
 
@@ -47,11 +49,11 @@ export default SignUp = () => {
                                 lastName: lastName,
                                 phone: phoneNumber,
                             })
-                            nav.replace("Home")
+                            db.doc(userEmail).collection('Lists').add({});
+                            nav.push("Sign Up 2")
                         })
                     if (response && response.user) {
                         alert('user is signed in')
-
                         //Navigate to Part 2 of signup page
                     }
                 } catch (e) {
@@ -109,12 +111,14 @@ export default SignUp = () => {
                         style={styles.textInput}
                         value={phoneNumber}
                         onChangeText={setPhoneNumber}
+                        keyboardType='phone-pad'
                     />
                     <TextInput
                         placeholder="Email"
                         style={styles.textInput}
                         value={userEmail}
                         onChangeText={setUserEmail}
+                        keyboardType='email-address'
                     />
                     <TextInput
                         placeholder="Password"

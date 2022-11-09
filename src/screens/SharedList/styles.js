@@ -19,13 +19,14 @@ const styles = StyleSheet.create({
 
     },
     sectionTitle: {
-      fontSize: 40,
-      color: colors.light,
-      fontFamily: 'Montserrat-Bold', 
-      alignItems: 'center',
-      padding: 25,
-      marginTop: 60,
-    },
+        fontSize: 40,
+        color: colors.light,
+        fontFamily: 'Montserrat-Bold', 
+        alignItems: 'center',
+        paddingLeft: 25,
+        paddingBottom: 13,
+        marginTop: 40,
+      },
     centerDisplay: {
         paddingBottom: 150,
         paddingHorizontal: 13,
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
     },
     CancelContainer: {
         position: 'absolute',
-        marginLeft: 10,
+        marginLeft: 330,
         marginTop: 10,
         fontSize: 12,
     }

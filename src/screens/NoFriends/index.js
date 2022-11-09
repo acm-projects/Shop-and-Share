@@ -2,7 +2,6 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import NewListScreen from '../NewList';
 
-
 import {
   StyleSheet,
   Text,
