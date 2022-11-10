@@ -67,85 +67,12 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
     },
 
-    nutContainer: {
+    container: {
         height: 100,
         width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 160,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-    },
-
-    fishContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 160,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-    },
-
-    vegContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 275,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-    },
-
-    veganContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 275,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-    },
-
-    lactoseContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 390,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-    },
-
-    glutenContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 390,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-    },
-
-    ketoContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 505,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-    },
-
-    addContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 505,
-        backgroundColor: colors.pureWhite,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
+        marginBottom: 15,
     },
 
     AddText: {
@@ -158,6 +85,17 @@ const styles = StyleSheet.create({
         width: 100,
         paddingBottom: 10,
     },
+    GridView: {
+        flex: 1, 
+        flexDirection: "row", 
+        flexWrap: 'wrap',
+        justifyContent: "space-between", 
+    },
+    scrollView: {
+        height: 600, 
+        marginTop: 150, 
+        marginHorizontal: 25
+    }
 });
 
 export default styles;

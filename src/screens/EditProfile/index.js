@@ -35,7 +35,7 @@ const EditProfile = () => {
       user.update({ lastName: lastName })
     if (number != '')
       user.update({ phone: number })
-
+    setModalVisible(!modalVisible);
     nav.pop();
   }
 
@@ -159,4 +159,3 @@ const EditProfile = () => {
 };
 
 export default EditProfile;
-

@@ -16,6 +16,7 @@ import {
     Image,
     ScrollView,
     ImageBackground,
+    FlatList
 } from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
@@ -23,7 +24,22 @@ import styles from './styles';
 import AddItems from '../../components/AddItems';
 
 
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'First Item',
+  },
+];
+
+const Item = ({ title}) => (
+  <AddItems />
+)
+
 const EditListScreen = () => {
+  const renderItem = ({item}) => (
+    <Item title={AddItems} />
+  );
+
   const [modalVisible, setModalVisible] = useState(true);
 
   const [date, setDate] = useState(new Date())
@@ -32,6 +48,7 @@ const EditListScreen = () => {
   const [isSelected, setSelection] = useState(false);
 
   const [isPinned, setPinned] = useState(false);
+
   return (
     <View>
         <ImageBackground source={require('../../../assets/images/Background.jpg')}
@@ -57,6 +74,7 @@ const EditListScreen = () => {
                 </Image>
                 </TouchableOpacity>
 
+              <View style={{paddingBottom: 10}}>
               <ScrollView style={styles.scrollView} nestedScrollEnabled={true}>
 
                 <TextInput style={{width: 300}}
@@ -126,14 +144,22 @@ const EditListScreen = () => {
                   <View style={styles.DividerThin}/>
                 </View>
 
+                <View style={{flexDirection: "row", justifyContent: "flex-start"}}>
                 <Text style={styles.ListDetailsHeader}>
                   Add Items
                 </Text>
+                <TouchableOpacity style={styles.ItemIcon}>
+                  <Image source={require('../../../assets/images/Add_Item_Icon.png')}/>
+                </TouchableOpacity>
+                </View>
 
                 {/* add item component; onPress of add item icon (plus sign button), 
                 call the component again*/}
-                  <AddItems/>
-
+                  <FlatList nestedScrollEnabled
+                  data = {DATA}
+                  renderItem={ renderItem }  
+                  />
+                  
                 <Text style={styles.ListDetailsHeader}>
                   Notes
                 </Text>
@@ -161,6 +187,7 @@ const EditListScreen = () => {
                   </View>
                 </View>
               </ScrollView>
+              </View>
 
               <View style={styles.buttonContainer}>
                 {/*onpress save any changes made to the list */}
@@ -170,6 +197,7 @@ const EditListScreen = () => {
                       </Text>
                   </TouchableOpacity>
               </View>
+
           </View>
         </View>
       </Modal>
