@@ -111,8 +111,9 @@ export default LogIn = () => {
                             </Text>
                         </View>
                     </TouchableOpacity>
-
+                    
                     {/* <View style={{ alignItems: 'center' }}>
+
                         <TouchableOpacity>
                             <Text style={styles.signUp}>
                                 Don't have an account?
