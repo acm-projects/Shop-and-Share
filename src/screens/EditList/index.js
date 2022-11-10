@@ -24,14 +24,7 @@ import styles from './styles';
 import AddItems from '../../components/AddItems';
 
 
-const DATA = [
-  {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
-  },
-];
-
-const Item = ({ title}) => (
+const Item = ({ title }) => (
   <AddItems />
 )
 
@@ -155,10 +148,10 @@ const EditListScreen = () => {
 
                 {/* add item component; onPress of add item icon (plus sign button), 
                 call the component again*/}
-                  <FlatList nestedScrollEnabled
-                  data = {DATA}
+                <FlatList 
+                  nestedScrollEnabled
                   renderItem={ renderItem }  
-                  />
+                />
                   
                 <Text style={styles.ListDetailsHeader}>
                   Notes
