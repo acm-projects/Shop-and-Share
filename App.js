@@ -22,7 +22,7 @@ const Bar = createBottomTabNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      {/* <Stack.Navigator>
         <Stack.Screen
           options={{ headerShown: false }}
           name="Landing Page"
@@ -83,7 +83,8 @@ const App = () => {
           name="Edit Profile"
           component={EditProfile}
         />
-      </Stack.Navigator>
+      </Stack.Navigator> */}
+      <EditList/>
     </NavigationContainer>
   );
 };
