@@ -10,15 +10,17 @@ PushNotification.createChannel(
     },
 );
 // Create one more input for collecting expiration date
-const handleSceduleNotification = (title, message) =>{
+const handleSceduleNotification = (item, date) =>{
     PushNotification.localNotificationSchedule({
         channelId: "123",
-        title : title, 
-        message : message,
+        title : "Expiration date coming soon", 
+        message : item + " is going to expire on " + date,
         date : new Date(Date.now() + 5 * 1000 ), // Change to collect date from firestore
 
 
     })
+
+    console.log("Title: " + item + " is going to expire on " + date )
 }
 
 export {handleSceduleNotification};
