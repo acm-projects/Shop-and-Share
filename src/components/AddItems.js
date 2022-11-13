@@ -3,6 +3,7 @@ import { TextInput } from "react-native-gesture-handler";
 import { Collapse, CollapseHeader, CollapseBody } from "accordion-collapse-react-native";
 import CheckBox from '@react-native-community/checkbox';
 import DatePicker from 'react-native-date-picker';
+import addItem from '../screens/EditList/index.js';
 
 import {
   ImageBackground,
@@ -18,13 +19,13 @@ import colors from '../../assets/colors/colors';
 const AddItems = () => {
   const [isSelected, setSelection] = useState(false);
 
-  const img = require("../../assets/images/Add_Item_Icon.png")
-  const [imageAsset, setImageAsset] = useState(img)
+  // const img = require("../../assets/images/Add_Item_Icon.png")
+  // const [imageAsset, setImageAsset] = useState(img)
 
-  const handleImageChange = () => {
-    const newImg = require("../../assets/images/Item_Dropdown_Icon.png")
-    setImageAsset(newImg)
-  }
+  // const handleImageChange = () => {
+  //   const newImg = require("../../assets/images/Item_Dropdown_Icon.png")
+  //   setImageAsset(newImg)
+  // }
 
   const [expirationDate, setExpirationDate] = useState(new Date())
   const [expirationOpen, setExpirationOpen] = useState(false)
@@ -43,11 +44,11 @@ const AddItems = () => {
             placeholder="Item Name"
           />
         </View>
-        <Collapse onToggle={handleImageChange}>
+        <Collapse>
           <CollapseHeader>
             <View style={styles.AlignIcons}>
               <Image
-                source={imageAsset} />
+                source={require("../../assets/images/Item_Dropdown_Icon.png")} />
             </View>
           </CollapseHeader>
           <CollapseBody styles={styles.AddItemContainer}>

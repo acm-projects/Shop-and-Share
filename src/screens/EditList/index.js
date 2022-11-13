@@ -24,14 +24,7 @@ import styles from './styles';
 import AddItems from '../../components/AddItems';
 
 
-const Item = ({ title }) => (
-  <AddItems />
-)
-
 const EditListScreen = () => {
-  const renderItem = ({item}) => (
-    <Item title={AddItems} />
-  );
 
   const [modalVisible, setModalVisible] = useState(true);
 
@@ -41,6 +34,28 @@ const EditListScreen = () => {
   const [isSelected, setSelection] = useState(false);
 
   const [isPinned, setPinned] = useState(false);
+
+  const [items, changeEl]  = useState([
+    { id : 1, name : "Item1"},
+  ]);
+  
+  const oneItem = ( {item} ) => (
+    <AddItems />
+  )
+  
+  const [itemState, setitemState] = useState(items)
+  const [idx, incr] = useState(2);
+
+  const addItem = () => {
+    var newItem = [...items, {id: idx, name: 'Item' + (idx+1)}]
+    items.push({
+      id: idx,
+      text: "Item" + (idx+1)
+    });
+    incr(idx+1);
+    setitemState(newItem)
+    changeEl(newItem)
+  }
 
   return (
     <View>
@@ -141,7 +156,7 @@ const EditListScreen = () => {
                 <Text style={styles.ListDetailsHeader}>
                   Add Items
                 </Text>
-                <TouchableOpacity style={styles.ItemIcon}>
+                <TouchableOpacity style={styles.ItemIcon} onPress={addItem}>
                   <Image source={require('../../../assets/images/Add_Item_Icon.png')}/>
                 </TouchableOpacity>
                 </View>
@@ -150,7 +165,8 @@ const EditListScreen = () => {
                 call the component again*/}
                 <FlatList 
                   nestedScrollEnabled
-                  renderItem={ renderItem }  
+                  data = { itemState }
+                  renderItem = { oneItem }
                 />
                   
                 <Text style={styles.ListDetailsHeader}>
