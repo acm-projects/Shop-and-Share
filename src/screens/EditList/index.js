@@ -88,7 +88,7 @@ const EditListScreen = () => {
                 <TextInput style={{width: 300}}
                   style={styles.NewListHeader}
                   placeholder="New List"
-                  placeholderTextColor={colors.pureBlack}
+                  placeholderTextColor={colors.grey}
                   multiline={true}>
                 </TextInput>
 

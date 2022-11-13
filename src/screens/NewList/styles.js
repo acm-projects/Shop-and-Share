@@ -139,7 +139,11 @@ const styles = StyleSheet.create({
     AlignDietaryPreferences: {
       flexDirection: "row",
       justifyContent: "space-between"
-      
+    },
+    ItemIcon: {
+      position: "absolute",
+      marginTop: 18,
+      marginLeft: 300
     },
     DietaryPreference: {
       color: colors.primaryPurple,
