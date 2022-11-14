@@ -40,10 +40,7 @@ const styles = StyleSheet.create({
         paddingLeft: 27,
         paddingRight: 18, 
         paddingTop: 15,
-        paddingBottom: 10,
-        //position: 'absolute',
-           //left: 10,
-           //top: 8,
+        paddingBottom: 13,
     },
     Text: {
         fontFamily: 'Montserrat-Medium',
@@ -77,104 +74,12 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
     },
 
-    nutContainer: {
+    container: {
         height: 100,
         width: 160,
-        position: 'absolute',
-            right: 206,
+        marginBottom: 10,
         backgroundColor: colors.pureWhite,
         borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    fishContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    vegContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 115,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    veganContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 115,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    lactoseContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 230,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    glutenContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 230,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    ketoContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 206,
-            top: 345,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
-        borderWidth: 1,
-        borderColor: "#C7C7C7",
-    },
-
-    addContainer: {
-        height: 100,
-        width: 160,
-        position: 'absolute',
-            right: 25,
-            top: 345,
-        backgroundColor: colors.pureWhite,
-        borderRadius: 18,
-        elevation: 0,
         borderWidth: 1,
         borderColor: "#C7C7C7",
     },
@@ -182,9 +87,8 @@ const styles = StyleSheet.create({
     nextContainer: {
         height: 42,
         width: 315,
-        position: 'absolute',
-            right: 40,
-            top: 460,
+        marginLeft: 15,
+        marginTop: 10,
         backgroundColor: colors.primaryPurple,
         borderRadius: 10,
         elevation: 0,
@@ -199,6 +103,28 @@ const styles = StyleSheet.create({
         fontSize: 16,
         paddingTop: 9,
     },
+
+    containerPress: {
+        height: 100,
+        width: 160,
+        marginBottom: 10,
+        backgroundColor: colors.pureWhite,
+        borderRadius: 18,
+        borderWidth: 3,
+        borderColor: colors.primaryPurple,
+    },
+
+    GridView: {
+        flex: 1, 
+        flexDirection: "row", 
+        flexWrap: 'wrap',
+        justifyContent: "space-between", 
+    },
+
+    scrollView: {
+        height: 600, 
+        marginHorizontal: 25
+    }
 });
 
 export default styles;

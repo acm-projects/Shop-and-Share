@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import {
     StyleSheet,
     Text,
@@ -66,22 +67,13 @@ const SetDietaryRestrictions = () => {
         nav.replace('Home No List');
     }
 
+
     return (
         <>
             <ImageBackground source={require('../../../assets/images/Background.jpg')}
                 style={styles.ImageBackground}>
                 <View>
                     <SafeAreaView>
-
-                        {/* <View style={styles.EditProfileContainer}>
-                            <TouchableOpacity
-                                onPress={() => navigation.navigate('HomeNoList')}
-                            >
-                                <Text style={styles.cancelText}>
-                                Cancel
-                                </Text>
-                            </TouchableOpacity>
-                        </View> */}
 
                         <View style={styles.Logo}>
                             <Image source={require('../../../assets/images/Logo_Full.png')} />
@@ -91,94 +83,87 @@ const SetDietaryRestrictions = () => {
                             <Text style={styles.questionText}>
                                 What are your{'\n'}dietary restrictions?
                             </Text>
-
+                        
+                        <View style={styles.scrollView}>
+                        <View style={styles.GridView}>
                             <TouchableOpacity
-                                onPress={() => changeRestriction(nut, setNut)}
+                                style={nut ? styles.containerPress : styles.container}
+                                onPress={() => {changeRestriction(nut, setNut)}}
                             >
-                                <View style={styles.nutContainer}>
-                                    <Text style={styles.Text}>
-                                        Nut Allergy
-                                    </Text>
-                                </View>
+                                <Text style={styles.Text}>
+                                    Nut Allergy
+                                </Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
+                                style={fish ? styles.containerPress : styles.container}
                                 onPress={() => changeRestriction(fish, setFish)}
                             >
-                                <View style={styles.fishContainer}>
-                                    <Text style={styles.Text}>
-                                        Fish Allergy
-                                    </Text>
-                                </View>
+                                <Text style={styles.Text}>
+                                    Fish Allergy
+                                </Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
+                                style={veg ? styles.containerPress : styles.container}
                                 onPress={() => changeRestriction(veg, setVeg)}
                             >
-                                <View style={styles.vegContainer}>
-                                    <Text style={styles.Text}>
-                                        Vegetarian
-                                    </Text>
-                                </View>
+                                <Text style={styles.Text}>
+                                    Vegetarian
+                                </Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
+                                style={vegan ? styles.containerPress : styles.container}
                                 onPress={() => changeRestriction(vegan, setVegan)}
                             >
-                                <View style={styles.veganContainer}>
-                                    <Text style={styles.Text}>
-                                        Vegan
-                                    </Text>
-                                </View>
+                                <Text style={styles.Text}>
+                                    Vegan
+                                </Text>
                             </TouchableOpacity>
 
 
                             <TouchableOpacity
+                                style={lactose ? styles.containerPress : styles.container}
                                 onPress={() => changeRestriction(lactose, setLactose)}
                             >
-                                <View style={styles.lactoseContainer}>
-                                    <Text style={styles.longText}>
-                                        Lactose        Intolerancy
-                                    </Text>
-                                </View>
+                                <Text style={styles.longText}>
+                                    Lactose        Intolerancy
+                                </Text>
                             </TouchableOpacity>
 
 
                             <TouchableOpacity
+                                style={gluten ? styles.containerPress : styles.container}
                                 onPress={() => changeRestriction(gluten, setGluten)}
                             >
-                                <View style={styles.glutenContainer}>
-                                    <Text style={styles.longText}>
-                                        Gluten         Intolerancy
-                                    </Text>
-                                </View>
+                                <Text style={styles.longText}>
+                                    Gluten         Intolerancy
+                                </Text>
                             </TouchableOpacity>
 
 
                             <TouchableOpacity
+                                style={keto ? styles.containerPress : styles.container}
                                 onPress={() => changeRestriction(keto, setKeto)}
                             >
-                                <View style={styles.ketoContainer}>
-                                    <Text style={styles.Text}>
-                                        Keto
-                                    </Text>
-                                </View>
+                                <Text style={styles.Text}>
+                                    Keto
+                                </Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
+                                style={addNew ? styles.containerPress : styles.container}
                                 onPress={() => { }}
                             >
-                                <View style={styles.addContainer}>
-                                    <TextInput
-                                        style={styles.AddText}
-                                        placeholder="+ Add New"
-                                        value={addNew}
-                                        onChangeText={setAddNew}
-                                    >
-                                    </TextInput>
-                                </View>
+                                <TextInput
+                                    style={styles.AddText}
+                                    placeholder="+ Add New"
+                                    value={addNew}
+                                    onChangeText={setAddNew}
+                                >
+                                </TextInput>
                             </TouchableOpacity>
-
 
                             <TouchableOpacity
                                 onPress={() => submitRestrictions()}
@@ -189,6 +174,9 @@ const SetDietaryRestrictions = () => {
                                     </Text>
                                 </View>
                             </TouchableOpacity>
+                            </View>
+                        </View>
+
 
 
                         </View>
