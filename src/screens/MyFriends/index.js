@@ -96,6 +96,18 @@ const oneFriend = ( {item} ) => (
     )
   }
 
+  const noFriendsMessage = ( {item} ) => {
+    return (
+      <View style={styles.AlignWithButton}>
+        <View>
+          <Text style={styles.EmptyFriends}>
+              You currently have no friends!
+          </Text>
+        </View>
+      </View>
+    )
+  }
+
   const onAccept = () => {
     requests.pop({
       id: 1,
@@ -144,7 +156,7 @@ const oneFriend = ( {item} ) => (
                   nestedScrollEnabled
                   data = { requestState }
                   renderItem = { oneRequest }
-                  ListEmptyComponent={noRequestsMessage}
+                  ListEmptyComponent={ noRequestsMessage }
                 />
           </View>
 
@@ -159,6 +171,7 @@ const oneFriend = ( {item} ) => (
                   nestedScrollEnabled
                   data = { friendState }
                   renderItem = { oneFriend }
+                  ListEmptyComponent={ noFriendsMessage }
                 />
             </View>
             </ScrollView>
