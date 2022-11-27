@@ -75,6 +75,13 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginVertical: 20,
     marginLeft: 75,
+  },
+  EmptyFriends: {
+    color: colors.lightDivider,
+    fontFamily: "Montserrat-Medium",
+    fontSize: 14,
+    marginVertical: 20,
+    marginLeft: 70,
   }
   });
 
