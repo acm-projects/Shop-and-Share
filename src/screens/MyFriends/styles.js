@@ -68,6 +68,13 @@ const styles = StyleSheet.create({
   ScrollableSection: {
     marginHorizontal: 23,
     height: 490
+  },
+  EmptyRequests: {
+    color: colors.lightDivider,
+    fontFamily: "Montserrat-Medium",
+    fontSize: 14,
+    marginVertical: 20,
+    marginLeft: 75,
   }
   });
 
