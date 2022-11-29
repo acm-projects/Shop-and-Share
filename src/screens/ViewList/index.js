@@ -54,7 +54,7 @@ export default ViewList = () => {
             })
     }
 
-    React.useLayoutEffect(() => {
+    React.useEffect(() => {
         return createList();
     }, [])
 
