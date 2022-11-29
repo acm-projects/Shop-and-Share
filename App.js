@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { LogBox } from 'react-native';
 
 import LandingPage from './src/screens/LandingPage';
 import LogIn from './src/screens/LogIn/index';
@@ -18,6 +19,10 @@ import EditProfile from './src/screens/EditProfile';
 
 const Stack = createNativeStackNavigator();
 const Bar = createBottomTabNavigator();
+
+LogBox.ignoreLogs([
+  "Require cycle: src"
+])
 
 const App = () => {
   return (
