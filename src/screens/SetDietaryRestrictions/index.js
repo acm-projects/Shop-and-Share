@@ -64,7 +64,7 @@ const SetDietaryRestrictions = () => {
 
         curUser.update('dietaryRestrictions', output);
 
-        nav.replace('Home No List');
+        nav.replace('Menu Bar');
     }
 
 
