@@ -26,6 +26,31 @@ import {
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles';
 import AddItems from '../../components/AddItems';
+import PushNotification from "react-native-push-notification";
+
+PushNotification.createChannel(
+    {
+      channelId: "1234", // (required)
+      channelName: "My channel", // (required)
+      channelDescription: "A channel to categorise your notifications", // (optional) default: undefined.
+      playSound: false, // (optional) default: true
+      soundName: "default", // (optional) See `soundName` parameter of `localNotification` function
+    },
+);
+// Create one more input for collecting expiration date
+const handleSceduleNotificationDemo = (title, message) =>{
+    PushNotification.localNotificationSchedule({
+        channelId: "1234",
+        title : title, 
+        message : message,
+        color: "#8271EF",
+        largeIcon: "../../../assets/images/Logo_Big.png",
+        date : new Date(Date.now() + 1 * 1000 ), // Change to collect date from firestore
+
+
+    })
+}
+
 
 LogBox.ignoreLogs([
   "VirtualizedLists should never be"
@@ -333,7 +358,7 @@ const NewListScreen = () => {
               <View style={styles.buttonContainer}>
                 {/*onpress add list to the home page
                 with all the details */}
-                <TouchableOpacity onPress={() => createList()}>
+                <TouchableOpacity onPress={() => {createList(); handleSceduleNotificationDemo("Item is Expired!", "Item: apples have expired")}}>
                   <Text style={styles.buttonText}>
                     Create List
                   </Text>
