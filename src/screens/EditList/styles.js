@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     scrollView: {
       marginHorizontal: 34,
       marginTop: 25,
+      marginBottom: 60,
     },
     ListDetailsHeader: {
       fontSize: 17,
@@ -111,6 +112,8 @@ const styles = StyleSheet.create({
       marginLeft: 6,
     },
     buttonContainer: {
+      position: "absolute",
+      top: 630,
       height: 45,
       backgroundColor: colors.primaryPurple,
       justifyContent: 'center',
@@ -118,8 +121,6 @@ const styles = StyleSheet.create({
       elevation:4,
       width: 289,
       marginHorizontal: 50,
-      position: "absolute",
-      top: 640
     },
     buttonText: {
       color: colors.pureWhite,
@@ -156,7 +157,37 @@ const styles = StyleSheet.create({
       fontFamily: "Montserrat-Regular",
       marginRight: 5,
       marginBottom: -3,
-    }
+    },
+    EmptyList: {
+      color: colors.secondaryPurple,
+      fontSize: 13.5,
+      fontFamily: "Montserrat-Regular",
+    },
+    FriendIcons: {
+      height: 35,
+      width: 35,
+      borderRadius: 30,
+      marginVertical: 5
+    },
+    ModalContainer: {
+      borderRadius: 50,
+      padding: 30,
+      backgroundColor: colors.pureWhite,
+      marginTop: 65
+    },
+    PlaceHolder: {
+      color: "grey",
+      marginTop: -5,
+      marginBottom: -5
+    },
+    SearchContainer: {
+      borderBottomColor: colors.pureWhite,
+      marginBottom: -5
+    },
+    TextStyle: {
+      fontSize: 15,
+      fontFamily: 'Montserrat-Regular',
+    },
 });
 
 export default styles;

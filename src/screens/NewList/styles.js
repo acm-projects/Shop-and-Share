@@ -157,7 +157,37 @@ const styles = StyleSheet.create({
       fontFamily: "Montserrat-Regular",
       marginRight: 5,
       marginBottom: -3,
-    }
+    },
+    EmptyList: {
+      color: colors.secondaryPurple,
+      fontSize: 13.5,
+      fontFamily: "Montserrat-Regular",
+    },
+    FriendIcons: {
+      height: 35,
+      width: 35,
+      borderRadius: 30,
+      marginVertical: 5
+    },
+    ModalContainer: {
+      borderRadius: 50,
+      padding: 30,
+      backgroundColor: colors.pureWhite,
+      marginTop: 65
+    },
+    PlaceHolder: {
+      color: "grey",
+      marginTop: -5,
+      marginBottom: -5
+    },
+    SearchContainer: {
+      borderBottomColor: colors.pureWhite,
+      marginBottom: -5
+    },
+    TextStyle: {
+      fontSize: 15,
+      fontFamily: 'Montserrat-Regular',
+    },
 });
 
 export default styles;
