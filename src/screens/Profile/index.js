@@ -40,6 +40,7 @@ const ProfileScreen = () => {
   const handleSignOut = () => {
     firebase.auth().signOut().then(() => {
       nav.pop();
+      nav.replace('Landing Page');
     })
   }
 
@@ -69,7 +70,7 @@ const ProfileScreen = () => {
               source={require('../../../assets/images/Temporary_Profile_Photo.jpg')} />
 
             {/* add functionality to the number of lists and groups later*/}
-            <View style = {{alignItems: "center", top: 130}}>
+            <View style={{ alignItems: "center", top: 130 }}>
               <Text style={styles.ListsNumber}>
                 {lists}
               </Text>

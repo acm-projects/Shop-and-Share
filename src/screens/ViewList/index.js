@@ -6,17 +6,17 @@ import { firebase } from '@react-native-firebase/firestore';
 import firestore from '@react-native-firebase/firestore';
 import { useEffect } from 'react';
 
-import { 
-  StyleSheet, 
-  Text, 
-  View, 
-  SafeAreaView, 
-  TouchableOpacity, 
-  ImageBackground,
-  Image,
-  Touchable,
-  ScrollView
-}  from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    SafeAreaView,
+    TouchableOpacity,
+    ImageBackground,
+    Image,
+    Touchable,
+    ScrollView
+} from "react-native";
 
 import colors from '../../../assets/colors/colors.js';
 import styles from './styles.js';
@@ -66,30 +66,30 @@ export default ViewList = () => {
             </Text>
             <View style={styles.containter}>
                 <View style={styles.centerDisplay}>
-                     <View style={{marginBottom: -10}}>
-                      <SearchableBar/>
-                      </View>
-                      
-                    <ScrollView style = {{height: 500, marginBottom: 20}}>
-                    {
-                        list.map((item) =>
-                            <TouchableOpacity key={item.title}>
-                                <View style={styles.box2}>
-                                    <Image
-                                        source={require('../../../assets/images/Pin.png')}
-                                        style={item.isPinned ? styles.pin : styles.noPin}
-                                    />
-                                    <Text style={styles.sectionList}>
-                                        {item.title}
-                                    </Text>
-                                    <Text style={styles.sectionList2}>
-                                        {item.date}
-                                    </Text>
-                                </View>
-                            </TouchableOpacity>
-                        )
-                    }
-                   </ScrollView>
+                    <View style={{ marginBottom: -10 }}>
+                        <SearchableBar />
+                    </View>
+
+                    <ScrollView style={{ height: 500, marginBottom: 20 }}>
+                        {
+                            list.map((item) =>
+                                <TouchableOpacity key={item.title} onPress={() => nav.push('Edit List')}>
+                                    <View style={styles.box2}>
+                                        <Image
+                                            source={require('../../../assets/images/Pin.png')}
+                                            style={item.isPinned ? styles.pin : styles.noPin}
+                                        />
+                                        <Text style={styles.sectionList}>
+                                            {item.title}
+                                        </Text>
+                                        <Text style={styles.sectionList2}>
+                                            {item.date}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+                            )
+                        }
+                    </ScrollView>
                 </View>
                 <TouchableOpacity onPress={() => nav.push('New List')}>
                     <View style={styles.addListButton}>
