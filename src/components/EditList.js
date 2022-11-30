@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 import { firebase } from '@react-native-firebase/firestore';
 import firestore from '@react-native-firebase/firestore';
 import DropDownPicker from 'react-native-dropdown-picker';
-import AddItems from './AddItems';
+import AddItemTemp from './AddItemTemp';
 
 import {
   Modal,
@@ -70,7 +70,7 @@ const EditListComponent = () => {
 
   
   const oneItem = ( {item} ) => (
-    <AddItems />
+    <AddItemTemp />
   )
 
   const oneDietPref = ( {item} ) => (
@@ -131,7 +131,7 @@ const EditListComponent = () => {
 
   const [openTemp, setOpenTemp] = useState(false);
 
-  const [valueTemp, setValueTemp] = useState([]);
+  const [valueTemp, setValueTemp] = useState(['Melissa Harper']);
     const [itemsTemp, setItemsTemp] = useState([
         {
           label: 'Melissa Harper', 
@@ -170,8 +170,8 @@ const EditListComponent = () => {
                 <TextInput
                   // style={{ width: 300 }}
                   style={styles.NewListHeader}
-                  placeholder="New List"
-                  placeholderTextColor={colors.grey}
+                  placeholder="List 1"
+                  placeholderTextColor={colors.pureBlack}
                   multiline={true}
                   value={listName}
                   onChangeText={setListName}
@@ -278,12 +278,19 @@ const EditListComponent = () => {
                   All Dietary Preferences
                 </Text>
 
-                <FlatList 
-                  nestedScrollEnabled
-                  data = { dietPrefState }
-                  renderItem = { oneDietPref }
-                  ListEmptyComponent= { noDietPrefMessage }
-                />
+                <View>
+      <View style={styles.AlignDietaryPreferences}>
+        {/* variable for friend's dietary preference */}
+        <Text style={styles.DietaryPreference}>
+          Veganism
+        </Text>
+        {/* variable for corresponding friend's name */}
+        <Text style={styles.FriendName}>
+          Melissa Harper
+        </Text>
+      </View>
+      <View style={styles.DividerThin}/>
+    </View>
 
                 <View style={{flexDirection: "row", justifyContent: "flex-start"}}>
                 <Text style={styles.ListDetailsHeader}>
