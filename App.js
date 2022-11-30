@@ -10,12 +10,12 @@ import SignUp from './src/screens/SignUp/index';
 import HomeNoListScreen from './src/screens/HomeNoList';
 import SetDietaryRestrictions from './src/screens/SetDietaryRestrictions';
 import NewList from './src/screens/NewList';
-import EditList from './src/screens/EditList';
 import MenuBar from './src/components/MenuBar';
 import ResetPassword1 from './src/screens/ResetPassword1';
 import ViewDietaryRestrictions from './src/screens/ViewDietaryRestrictions';
 import EditDietaryRestrictions from './src/screens/EditDietaryRestrictions';
 import EditProfile from './src/screens/EditProfile';
+import EditListComponent from './src/components/EditList';
 
 const Stack = createNativeStackNavigator();
 const Bar = createBottomTabNavigator();
@@ -61,7 +61,7 @@ const App = () => {
         <Stack.Screen
           options={{ headerShown: false }}
           name="Edit List"
-          component={EditList}
+          component={EditListComponent}
         />
         <Bar.Screen
           options={{ headerShown: false }}
